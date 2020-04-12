@@ -10,7 +10,7 @@
 
 Website pessoal, single page que foi desenvolvido para fins de estudo das linguagens `[JavaScript]`,`[PHP]`,`[HTML]` e `[CSS]`.
 
-![Screenshot](screenShot/website.gif)
+![Screenshot](img/website.gif)
 
 
 ## Arquivos
@@ -21,18 +21,18 @@ Website pessoal, single page que foi desenvolvido para fins de estudo das lingua
 
 ### Front-End
 * [  ] Website.
-      * [ X ] Menu.
-            * [ X ] Menu site.
-            * [ X ] Menu mobile.
-      * [ X ] Section Call.
-      * [ X ] Section Services.
-      * [ X ] Section Team.
-      * [ X ] Section Testimony.
-      * [ X ] Section Contact and Map.
-      * [  ] Page Error.
-      * [  ] Animate.
-      * [  ] Mask Form.
-      * [  ] Google Maps.
+* [ X ] Menu.
+      * [ X ] Menu site.
+      * [ X ] Menu mobile.
+* [ X ] Section Call.
+* [ X ] Section Services.
+* [ X ] Section Team.
+* [ X ] Section Testimony.
+* [ X ] Section Contact and Map.
+* [  ] Page Error.
+* [  ] Animate.
+* [  ] Mask Form.
+* [  ] Google Maps.
 
 * [  ] Dashboard.
       * [  ] Asside - Header - Content.
@@ -68,9 +68,6 @@ Website pessoal, single page que foi desenvolvido para fins de estudo das lingua
             * [  ] + addUser().
             * [  ] + updateUser().
             * [  ] + deleteUser().
-
-
-
 
 
 ## Configuração para Desenvolvimento
