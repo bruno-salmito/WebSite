@@ -35,26 +35,27 @@ Website pessoal, single page que foi desenvolvido para fins de estudo das lingua
 * [  ] Google Maps.
 
 * [  ] Dashboard.
-      * [  ] Asside - Header - Content.
-      * [  ] Menu and pages.
-      * [  ] Page Error.
+     * [  ] Asside - Header - Content.
+     * [  ] Menu and pages.
+     * [  ] Page Error.
 
 ### Back-End 
 * [  ] Website.
-      * [  ] Friendly Url`s.
-      * [  ] Config.php.
-      * [  ] Load Page and 404 error.
-      * [  ] Send form E-mail.
-            * [  ] PHPMayler.
-            * [  ] Class E-mail.
-            * [  ] Ajax form.
-                  * [  ] Error/Success box.
-      * [  ] Class Guest.
-            * [  ] + onlineGuest().
-            * [  ] + visits().
+* [  ] Friendly Url`s.
+* [  ] Config.php.
+* [  ] Load Page and 404 error.
+* [  ] Send form E-mail.
+     * [  ] PHPMayler.
+     * [  ] Class E-mail.
+     * [  ] Ajax form.
+     * [  ] Error/Success box.
+* [  ] Class Guest.
+     * [  ] + onlineGuest().
+     * [  ] + visits().
 
 
 * [  ] Dashboard.
+<<<<<<< HEAD
       * [  ] Mysql class.
       * [  ] Painel class.
             * [  ] + login().
@@ -69,6 +70,21 @@ Website pessoal, single page que foi desenvolvido para fins de estudo das lingua
             * [  ] + updateUser().
             * [  ] + deleteUser().
 
+=======
+* [  ] Mysql class.
+* [  ] Painel class.
+     * [  ] + login().
+     * [  ] + loadPage().
+     * [  ] + permission().
+     * [  ] + getGroup().
+     * [  ] + warning().
+     * [  ] + logFile().
+
+* [  ] User class.
+     * [  ] + addUser().
+     * [  ] + updateUser().
+     * [  ] + deleteUser().
+>>>>>>> 93a35064ae45aaf2efc95ea51f96f7d44d9a5101
 
 ## Configuração para Desenvolvimento
 
