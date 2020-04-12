@@ -1,0 +1,829 @@
+/*
+* Arquivo de estilização do site principal
+* Autor: Bruno Salmito
+* Versão: 0.0.1
+* GitHub: https://github.com/bruno-salmito
+*/
+
+/*----------------------------------------------------
+* Reset do navegador e boot css
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    /*1rem = 10px*/
+    font-size: 62.5%;
+}
+
+.center {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.clear {
+    clear: both;
+}
+
+/*----------------------------------------------------
+* Header
+*/
+header {
+    padding: 1.5rem 0;
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+header.on {
+    background-color: #fff;
+}
+
+header.on .logo {
+    color: #7159c1;
+}
+
+header.on .line {
+    background-color: #7159c1;
+}
+
+header.on .menuSection.on nav ul li a {
+    color: white;
+}
+
+header.on nav ul li a {
+    color: #7159c1;
+}
+
+header .logo {
+    float: left;
+    color: white;
+}
+
+header .logo i {
+    font-size: 2.3rem;
+}
+
+header .logo span {
+    font-size: 2.0rem;
+    font-weight: 600;
+}
+
+header .logo span::before {
+    content: '';
+    padding-left: .5rem;
+}
+
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    float: left;
+    font-size: 1.8rem;
+    padding: 0 1.8rem;
+    transition: all .5s ease;
+}
+
+header nav ul li a:hover {
+    border-bottom: .1rem solid white;
+}
+
+header.on nav ul li a:hover {
+    border-bottom: .1rem solid #534092;
+}
+
+header nav ul li:last-child {
+    border: .2rem solid white;
+    border-radius: 1rem;
+}
+
+header.on nav ul li:last-child {
+    border: .2rem solid #7159c1;
+}
+
+header nav ul li:last-child:hover {
+    background-color: rgba(255, 255, 255, 0.527);
+    border: .2rem solid white;
+}
+
+header nav ul li:last-child:hover a {
+    border: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*----------------------------------------------------
+* Section call
+*/
+section.call {
+    width: 100%;
+    height: calc(100vh + 6.0rem);
+    position: relative;
+    top: -6.0rem;
+    z-index: 1;
+    background-image: linear-gradient(to right top, #7159c1, #6a53b6, #634eaa, #5d489f, #564394);
+
+}
+
+section.call>.center {
+    height: 100%;
+}
+
+section.call .skewed {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 13%;
+    background-color: #fff;
+    transform: skewY(-4deg);
+    transform-origin: bottom right;
+}
+
+section.call .callText {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+section.call .callText .callTextWraper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+section.call .callText .callTextWraper h2 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    color: white;
+}
+
+section.call .callText .callTextWraper h2 span {
+    font-weight: 600;
+}
+
+section.call .callText .callTextWraper h4 {
+    font-size: 1.6rem;
+    color: white;
+    font-style: italic;
+    font-weight: 300;
+    margin: .2rem 0 1.5rem 0;
+    letter-spacing: .2rem;
+}
+
+section.call .callText .callTextWraper .formBox .inputBox {
+    position: absolute;
+}
+
+section.call .callText .callTextWraper .formBox .inputBox input[type=email] {
+    width: 40.0rem;
+    height: 4.0rem;
+    border: .1rem solid #ccc;
+    border-radius: 2.0rem;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    padding-left: 1.0rem;
+    float: left;
+
+
+}
+
+
+section.call .callText .callTextWraper .formBox input[type=submit] {
+    float: left;
+    margin-left: -12.0rem;
+    width: 12.0rem;
+    height: 4.0rem;
+    border: none;
+    line-height: 4.0rem;
+    text-align: center;
+    background-color: #fff;
+    border: .1rem solid #ccc;
+    border-radius: 2.0rem;
+    font-size: 1.2rem;
+    outline: none;
+    color: #7159c1;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+section.call .callText .callTextWraper .formBox input[type=submit]:hover {
+    background-color: rgba(255, 255, 255, 0.74);
+}
+
+section.call .callText .callTextWraper .formBox .inputBox label {
+    display: block;
+    padding: .5rem 1.0rem;
+    color: white;
+}
+
+section.call .callImg {
+    float: left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+section.call .callImg .imac {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 2.0rem;
+    background-image: url('../img/imac.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+section.call .callImg .iphone {
+    position: absolute;
+    right: 0;
+    bottom: 5.0rem;
+    width: 25%;
+    height: 40%;
+    background-image: url('../img/iphone.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: white;
+}
+
+::-ms-input-placeholder {
+    color: white;
+}
+
+/*----------------------------------------------------
+* Section Services
+*/
+section.services {
+    width: 100%;
+    height: 100%;
+    margin: 5px auto;
+    text-align: center;
+}
+
+section.services>.center {
+    height: 100%;
+}
+
+section.services h1 {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    color: rgb(160, 160, 160);
+    letter-spacing: .2rem;
+    font-weight: 400;
+}
+
+section.services h2 {
+    font-size: 1.8rem;
+    color: rgb(160, 160, 160);
+    letter-spacing: .1rem;
+    font-weight: 300;
+    font-style: 300;
+}
+
+section.services .boxWraper {
+    width: 100%;
+    height: 35%;
+    margin: 2.8rem auto;
+    text-align: center;
+}
+
+section.services .boxWraper .boxSingle {
+    width: 32%;
+    display: inline-block;
+    max-width: 20.0rem;
+    height: 100%;
+    padding: 1.5rem;
+    margin: 0 1.5rem;
+    border: .2rem solid #7159c1;
+    border-radius: 1.0rem;
+}
+
+section.services .boxWraper .boxSingle i {
+    font-size: 2.8rem;
+    margin: 1.0rem 0;
+    color: #634eaa;
+}
+
+section.services .boxWraper .boxSingle h4 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+section.services .boxWraper .boxSingle p {
+    text-align: justify;
+    margin-top: .8rem;
+}
+
+/*----------------------------------------------------
+* Section testimony
+*/
+section.testimony {
+    width: 100%;
+    background-image: linear-gradient(to right top, #7159c1, #6a53b6, #634eaa, #5d489f, #564394);
+    text-align: center;
+    padding: 2.0rem;
+    color: white;
+}
+
+section.testimony .wrapTestimony {
+    margin: 0 auto;
+    max-width: 60.0rem;
+}
+
+section.testimony .wrapTestimony h2 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+section.testimony .wrapTestimony blockquote {
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 300;
+    margin-top: .8rem;
+}
+
+section.testimony .wrapTestimony p {
+    font-size: 1.6rem;
+    margin: 1.0rem 0;
+}
+
+section.testimony .wrapTestimony img {
+    max-width: 64px;
+}
+
+/*----------------------------------------------------
+* Section team
+*/
+section.team {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+section.team>.center {
+    max-width: 100.0rem;
+}
+
+section.team h2 {
+    font-size: 2.8rem;
+    color: rgb(160, 160, 160);
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin: 1.5rem 0;
+}
+
+section.team p {
+    color: rgb(160, 160, 160);
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    text-align: justify;
+    margin: 1.5rem 0;
+}
+
+section.team .wraperTeam {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+section.team .wraperTeam .singleTeam {
+    width: 28%;
+    height: 40.0rem;
+    display: inline-block;
+    margin: 2.0rem 1.5rem;
+    background-image: linear-gradient(to right top, #7159c1, #6a53b6, #634eaa, #5d489f, #564394);
+    padding: 1.0rem;
+    border-radius: 1.8rem;
+    position: relative;
+    transition: all .5s ease;
+}
+
+section.team .wraperTeam .singleTeam:hover {
+    box-shadow: 10px 10px 10px rgb(151, 150, 150);
+    background-image: linear-gradient(to top left, #7159c1, #6a53b6, #634eaa, #5d489f, #564394);
+}
+
+section.team .wraperTeam .singleTeam img {
+    width: 64px;
+    margin: 1.5rem 0 0 0;
+}
+
+section.team .wraperTeam .singleTeam h2 {
+    color: white;
+    font-size: 1.8rem;
+}
+
+section.team .wraperTeam .singleTeam p {
+    color: white;
+    text-align: center;
+
+}
+
+section.team .wraperTeam .singleTeam .socialBar {
+    position: absolute;
+    bottom: 2.0rem;
+    left: 0;
+    width: 100%;
+
+}
+
+section.team .wraperTeam .singleTeam .socialBar span {
+    display: block;
+    width: 100%;
+    height: .2rem;
+    background-color: #fff;
+}
+
+section.team .wraperTeam .singleTeam .socialBar i {
+    font-size: 2.8rem;
+    color: white;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+section.team .wraperTeam .singleTeam .socialBar i:hover {
+    transform: scale(1.3) rotate(360deg);
+}
+
+/*----------------------------------------------------
+* Section contact
+*/
+section.contact {
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(to right top, #7159c1, #6a53b6, #634eaa, #5d489f, #564394);
+    padding: 4.0rem 0;
+}
+
+section.contact h2 {
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 1.5rem;
+}
+
+section.contact .boxForm {
+    float: left;
+    width: 50%;
+}
+
+section.contact .boxForm form {
+    max-width: 50.0rem;
+    padding: 2.0rem;
+    margin: 0 auto;
+
+}
+
+section.contact .boxForm form .inputBox {
+    width: 100%;
+    display: inline-block;
+    margin: 1.2rem 0;
+    padding: 2%;
+}
+
+section.contact .boxForm form .inputBox.w50 {
+    width: 50%;
+    float: left;
+    margin: 0;
+
+}
+
+section.contact .boxForm form .inputBox label {
+    display: block;
+    text-align: left;
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: .4rem;
+}
+
+section.contact .boxForm form .inputBox input,
+section.contact .boxForm form .inputBox textarea {
+    width: 100%;
+    height: 4.0rem;
+    border: none;
+    outline: none;
+    border-radius: 1.2rem;
+    padding-left: 1.0rem;
+}
+
+section.contact .boxForm form .inputBox textarea {
+    resize: none;
+    height: 5.0rem;
+}
+
+section.contact .boxForm form input[type=submit] {
+    width: 20.0rem;
+    height: 4.0rem;
+    border: none;
+    background-color: #4a3981;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding-left: 0;
+    border-radius: 1.0rem;
+}
+
+section.contact .boxForm form input[type=submit]:hover {
+    background-color: #463481;
+}
+
+section.contact .maps {
+    float: right;
+    width: 50%;
+    height: 40.0rem;
+}
+
+section.contact .maps .map {
+    width: 100%;
+    max-width: 50.0rem;
+    height: 40.0rem;
+    background-color: #ccc;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------
+*    Animações
+*    Para usar as animações basta colocar na tag o
+*    Atributo data-anime
+*/
+[data-anime] {
+    opacity: 0;
+    transition: all .8s ease;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime="bottom"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+
+/*----------------------------------------------------
+* Responsivo
+*/
+@media screen and (max-width:980px) {
+    html {
+        font-size: 60%;
+    }
+
+    section.call .callText .callTextWraper h2 {
+        font-size: 2.6rem;
+    }
+
+    section.call .callImg .imac {
+        bottom: -2.0rem;
+    }
+
+    section.call .callImg .iphone {
+        width: 11.0rem;
+        height: 22.0rem;
+
+    }
+}
+
+@media screen and (max-width: 880px) {
+    html {
+        font-size: 55%;
+    }
+
+    section.call .callText {
+        float: none;
+        width: 100%;
+        height: 40.0rem;
+        text-align: center;
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+
+    section.call .callText .callTextWraper {
+        position: none;
+        width: 100%;
+    }
+
+    section.call .callText .callTextWraper .formBox .inputBox {
+        position: relative;
+
+    }
+
+    section.call .callText .callTextWraper .formBox .inputBox input[type=email] {
+        width: 100%;
+        max-width: 40.0rem;
+        float: none;
+    }
+
+
+    section.call .callText .callTextWraper .formBox input[type=submit] {
+        float: none;
+        margin-left: -10.0rem;
+        width: 10.0rem;
+    }
+
+    section.call .callImg {
+        float: none;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    section.call .callImg .iphone {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+
+    header .logo span {
+        text-transform: uppercase;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav ul li:last-child {
+        display: none;
+    }
+
+    header .menu-toggle {
+        width: 5.0rem;
+        position: fixed;
+        top: .5rem;
+        right: 1.0rem;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    header .line {
+        width: 100%;
+        height: .6rem;
+        margin: .8rem 0;
+        background-color: #fff;
+        transition: all .8s ease;
+    }
+
+    .menuSection {
+        width: 100%;
+        height: calc(100vh - 6.2rem);
+        position: absolute;
+        background-color: #7159c1;
+        top: 5.8rem;
+        left: -100vw;
+        z-index: 5;
+        transition: .8s ease
+    }
+
+
+    header .menuSection.on {
+        left: 0;
+    }
+
+    header .menuSection.on .line:nth-of-type(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    header .menuSection.on .line:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    header .menuSection.on .line:nth-of-type(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    header .menuSection.on nav {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 4.0rem;
+    }
+
+    header .menuSection.on nav ul li {
+        width: 100%;
+
+    }
+
+    header .menuSection.on nav ul li a {
+        display: block;
+        text-transform: uppercase;
+        padding: 6.0rem 0;
+    }
+
+    header .menuSection.on nav ul li a:hover {
+        background-color: #534092;
+        border: none;
+    }
+
+    section.services .boxWraper .boxSingle {
+        float: none;
+    }
+
+    section.team .wraperTeam {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    section.team .wraperTeam .singleTeam {
+        width: 30%;
+
+    }
+
+    section.contact .boxForm {
+        float: none;
+        width: 100%;
+    }
+
+    section.contact .maps {
+        float: none;
+        width: 100%;
+        height: 40.0rem;
+    }
+
+
+
+}
+
+@media screen and (max-width:600px) {
+    html {
+        font-size: 45%;
+    }
+
+    section.services .boxWraper .boxSingle {
+        width: 50%;
+    }
+
+    section.services .boxWraper .boxSingle:nth-of-type(3) {
+        display: none;
+    }
+
+    section.team .wraperTeam .singleTeam {
+        width: 50%;
+        margin: 1.5rem auto;
+
+    }
+
+}
