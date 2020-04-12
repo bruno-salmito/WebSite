@@ -17,20 +17,20 @@
 
 ## Arquivos site principal
 🚀 __*JS*__ -> Na pasta `js` estão localizados todos os scripts do site principal.
-     1. *js/animate.js* => Script que controla as animações da página.
-     2. *js/maps.js* => Script para adição do Google Maps.
-     3. *js/mask.js* => Script que adiciona uma mascará aos formulários
-     4. *js/menu.js* => Script que controla o menu mobile
-     5. *js/scrollMenu.js* => Script que adiciona um efeito ao header do site.
+1. *js/animate.js* => Script que controla as animações da página.
+2. *js/maps.js* => Script para adição do Google Maps.
+3. *js/mask.js* => Script que adiciona uma mascará aos formulários
+4. *js/menu.js* => Script que controla o menu mobile
+5. *js/scrollMenu.js* => Script que adiciona um efeito ao header do site.
 
 🚀 __*CSS*__ -> Na pasta `css` estão localizados todos os arquivos de css do site principal
-     1. *css/all.css* => Arquivo de estilo do fontawsome
-     2. *css/style.css* => Arquivo de estilização do site principal
+1. *css/all.css* => Arquivo de estilo do fontawsome
+2. *css/style.css* => Arquivo de estilização do site principal
 
 🚀 __*PHP*__ -> Nas pastas class, e na raiz deste projeto encontra-se os arquivos necessários para controle do backend do site e 
 dashboard
-     1. *config.php* => Contém as variáveis globais e configurações gerais
-     2. *class/Guest.php*
+1. *config.php* => Contém as variáveis globais e configurações gerais
+2. *class/Guest.php*
 
 ```css
 /* --------------------------------------------------
@@ -153,6 +153,9 @@ function animeScroll() {
 Basta clonar ou fazer o download do repositório e mexer a vontade.
 
 ## Histórico de lançamentos
+* 0.0.3
+    * MUDANÇA: Correção do arquivo README.md
+    * ADIÇÃO: Scripts animate, maps, mask ao site principal
 * 0.0.2
     * MUDANÇA: Correção do CSS.
 * 0.0.1
