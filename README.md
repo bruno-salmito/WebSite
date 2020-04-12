@@ -8,18 +8,96 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-Website pessoal, single page que foi desenvolvido para fins de estudo das linguagens `[JavaScript]`,`[PHP]`,`[HTML]` e `[CSS]`.
+>Website pessoal, single page que foi desenvolvido para fins de estudo das linguagens `[JavaScript]`,`[PHP]`,`[HTML]` e `[CSS]`.
 
-![Screenshot](img/website.gif)
+<p align="center">
+<img width="70%" src="img/website.gif" alt="Website"/>
+</p>
 
 
-## Arquivos
+## Arquivos site principal
+🚀 __*JS*__ -> Na pasta `js` estão localizados todos os scripts do site principal.
+     1. *js/animate.js* => Script que controla as animações da página.
+     2. *js/maps.js* => Script para adição do Google Maps.
+     3. *js/mask.js* => Script que adiciona uma mascará aos formulários
+     4. *js/menu.js* => Script que controla o menu mobile
+     5. *js/scrollMenu.js* => Script que adiciona um efeito ao header do site.
 
+🚀 __*CSS*__ -> Na pasta `css` estão localizados todos os arquivos de css do site principal
+     1. *css/all.css* => Arquivo de estilo do fontawsome
+     2. *css/style.css* => Arquivo de estilização do site principal
 
+🚀 __*PHP*__ -> Nas pastas class, e na raiz deste projeto encontra-se os arquivos necessários para controle do backend do site e 
+dashboard
+     1. *config.php* => Contém as variáveis globais e configurações gerais
+     2. *class/Guest.php*
+
+```css
+/* --------------------------------------------------
+*    Animações
+*    Para usar as animações basta colocar na tag o
+*    Atributo data-anime
+*/
+[data-anime] {
+    opacity: 0;
+    transition: all .8s ease;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime="bottom"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+```
+
+```javascript
+/**
+ * Função animeScroll 
+ * Quando o usuário declarar o attributo data-anime ativa o scroll
+ * quando fizer o scroll executa as animações com o atributo
+ */
+const target = document.querySelectorAll('[data-anime]');
+
+function animeScroll() {
+    const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+    const bannerTop = window.innerHeight;
+
+    target.forEach(function (element) {
+        if ((windowTop) > element.offsetTop) {
+            //Adiciona a classe que controla a animação
+            element.classList.add('animate');
+        } else {
+            //Remove a classe que controla a animação
+            element.classList.remove('animate');
+        }
+    })
+
+} //Fim da function animeScroll
+```
+
+```php
+
+```
 
 ## Próximas implatações
 
-### Front-End
+#### Front-End
 * [  ] Website.
 * [ X ] Menu.
       * [ X ] Menu site.
@@ -30,16 +108,16 @@ Website pessoal, single page que foi desenvolvido para fins de estudo das lingua
 * [ X ] Section Testimony.
 * [ X ] Section Contact and Map.
 * [  ] Page Error.
-* [  ] Animate.
-* [  ] Mask Form.
-* [  ] Google Maps.
+* [ X ] Animate.
+* [ X ] Mask Form.
+* [ X ] Google Maps.
 
 * [  ] Dashboard.
      * [  ] Asside - Header - Content.
      * [  ] Menu and pages.
      * [  ] Page Error.
 
-### Back-End 
+#### Back-End 
 * [  ] Website.
 * [  ] Friendly Url`s.
 * [  ] Config.php.
@@ -55,22 +133,6 @@ Website pessoal, single page que foi desenvolvido para fins de estudo das lingua
 
 
 * [  ] Dashboard.
-<<<<<<< HEAD
-      * [  ] Mysql class.
-      * [  ] Painel class.
-            * [  ] + login().
-            * [  ] + loadPage().
-            * [  ] + permission().
-            * [  ] + getGroup().
-            * [  ] + warning().
-            * [  ] + logFile().
-
-      * [  ] User class.
-            * [  ] + addUser().
-            * [  ] + updateUser().
-            * [  ] + deleteUser().
-
-=======
 * [  ] Mysql class.
 * [  ] Painel class.
      * [  ] + login().
@@ -84,7 +146,7 @@ Website pessoal, single page que foi desenvolvido para fins de estudo das lingua
      * [  ] + addUser().
      * [  ] + updateUser().
      * [  ] + deleteUser().
->>>>>>> 93a35064ae45aaf2efc95ea51f96f7d44d9a5101
+
 
 ## Configuração para Desenvolvimento
 

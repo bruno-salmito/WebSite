@@ -31,10 +31,6 @@ function debounce(func, wait, immediate) {
 
 /**
  * Função animeScroll 
- */
-
-
-/**
  * Quando o usuário declarar o attributo data-anime ativa o scroll
  * quando fizer o scroll executa as animações com o atributo
  */

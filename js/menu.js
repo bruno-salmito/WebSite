@@ -1,5 +1,7 @@
 /**
- * Script que controla o menu mobile
+ * Script que contrala as animações do menu mobile 
+ * Autor: Bruno Salmito Filizola
+ * Versão: 0.1
  */
 let show = true;
 const menuSection = document.querySelector('.menuSection');
