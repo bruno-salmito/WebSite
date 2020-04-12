@@ -21,57 +21,53 @@ Website pessoal, single page que foi desenvolvido para fins de estudo das lingua
 
 ### Front-End
 * [  ] Website.
-      * [ X ] Menu.
-            * [ X ] Menu site.
-            * [ X ] Menu mobile.
-      * [ X ] Section Call.
-      * [ X ] Section Services.
-      * [ X ] Section Team.
-      * [ X ] Section Testimony.
-      * [ X ] Section Contact and Map.
-      * [  ] Page Error.
-      * [  ] Animate.
-      * [  ] Mask Form.
-      * [  ] Google Maps.
+* [ X ] Menu.
+      * [ X ] Menu site.
+      * [ X ] Menu mobile.
+* [ X ] Section Call.
+* [ X ] Section Services.
+* [ X ] Section Team.
+* [ X ] Section Testimony.
+* [ X ] Section Contact and Map.
+* [  ] Page Error.
+* [  ] Animate.
+* [  ] Mask Form.
+* [  ] Google Maps.
 
 * [  ] Dashboard.
-      * [  ] Asside - Header - Content.
-      * [  ] Menu and pages.
-      * [  ] Page Error.
+     * [  ] Asside - Header - Content.
+     * [  ] Menu and pages.
+     * [  ] Page Error.
 
 ### Back-End 
 * [  ] Website.
-      * [  ] Friendly Url`s.
-      * [  ] Config.php.
-      * [  ] Load Page and 404 error.
-      * [  ] Send form E-mail.
-            * [  ] PHPMayler.
-            * [  ] Class E-mail.
-            * [  ] Ajax form.
-                  * [  ] Error/Success box.
-      * [  ] Class Guest.
-            * [  ] + onlineGuest().
-            * [  ] + visits().
+* [  ] Friendly Url`s.
+* [  ] Config.php.
+* [  ] Load Page and 404 error.
+* [  ] Send form E-mail.
+     * [  ] PHPMayler.
+     * [  ] Class E-mail.
+     * [  ] Ajax form.
+     * [  ] Error/Success box.
+* [  ] Class Guest.
+     * [  ] + onlineGuest().
+     * [  ] + visits().
 
 
 * [  ] Dashboard.
-      * [  ] Mysql class.
-      * [  ] Painel class.
-            * [  ] + login().
-            * [  ] + loadPage().
-            * [  ] + permission().
-            * [  ] + getGroup().
-            * [  ] + warning().
-            * [  ] + logFile().
+* [  ] Mysql class.
+* [  ] Painel class.
+     * [  ] + login().
+     * [  ] + loadPage().
+     * [  ] + permission().
+     * [  ] + getGroup().
+     * [  ] + warning().
+     * [  ] + logFile().
 
-      * [  ] User class.
-            * [  ] + addUser().
-            * [  ] + updateUser().
-            * [  ] + deleteUser().
-
-
-
-
+* [  ] User class.
+     * [  ] + addUser().
+     * [  ] + updateUser().
+     * [  ] + deleteUser().
 
 ## Configuração para Desenvolvimento
 
