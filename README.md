@@ -88,7 +88,7 @@ function animeScroll() {
         }
     })
 
-} //Fim da function animeScroll
+} // Fim da function animeScroll
 ~~~
 
 ~~~php
@@ -98,73 +98,73 @@ function animeScroll() {
 ## Próximas implatações
 
 #### Front-End
-* [  ] Website.
-* [ X ] Menu.
-      * [ X ] Menu site.
-      * [ X ] Menu mobile.
-* [ X ] Section Call.
-* [ X ] Section Services.
-* [ X ] Section Team.
-* [ X ] Section Testimony.
-* [ X ] Section Contact and Map.
-* [  ] Page Error.
-* [ X ] Animate.
-* [ X ] Mask Form.
-* [ X ] Google Maps.
+- [ ] Website.
+- [x] Menu.
+    - [x] Menu site.
+    - [x] Menu mobile.
+- [x] Section Call.
+- [x] Section Services.
+- [x] Section Team.
+- [x] Section Testimony.
+- [x] Section Contact and Map.
+- [ ] Page Error.
+- [x] Animate.
+- [x] Mask Form.
+- [x] Google Maps.
 
-* [  ] Dashboard.
-     * [  ] Asside - Header - Content.
-     * [  ] Menu and pages.
-     * [  ] Page Error.
+- [ ] Dashboard.
+    - [ ] Asside - Header - Content.
+    - [ ] Menu and pages.
+    - [ ] Page Error.
 
 #### Back-End 
-* [  ] Website.
-* [  ] Friendly Url`s.
-* [  ] Config.php.
-* [  ] Load Page and 404 error.
-* [  ] Send form E-mail.
-     * [  ] PHPMayler.
-     * [  ] Class E-mail.
-     * [  ] Ajax form.
-     * [  ] Error/Success box.
-* [  ] Class Guest.
-     * [  ] + onlineGuest().
-     * [  ] + visits().
+- [ ] Website.
+- [ ] Friendly URLs.
+- [ ] `config.php`.
+- [ ] Load Page and 404 error.
+- [ ] Send form E-mail.
+    - [ ] PHPMayler.
+    - [ ] Class E-mail.
+    - [ ] Ajax form.
+    - [ ] Error/Success box.
+- [ ] Class Guest.
+    - [ ] + `onlineGuest()`.
+    - [ ] + `visits()`.
 
 
-* [  ] Dashboard.
-* [  ] Mysql class.
-* [  ] Painel class.
-     * [  ] + login().
-     * [  ] + loadPage().
-     * [  ] + permission().
-     * [  ] + getGroup().
-     * [  ] + warning().
-     * [  ] + logFile().
+- [ ] Dashboard.
+- [ ] Mysql class.
+- [ ] Painel class.
+    - [ ] + `login()`.
+    - [ ] + `loadPage()`.
+    - [ ] + `permission()`.
+    - [ ] + `getGroup()`.
+    - [ ] + `warning()`.
+    - [ ] + `logFile()`.
 
-* [  ] User class.
-     * [  ] + addUser().
-     * [  ] + updateUser().
-     * [  ] + deleteUser().
+- [ ] User class.
+    - [ ] + `addUser()`.
+    - [ ] + `updateUser()`.
+    - [ ] + `deleteUser()`.
 
 
 ## Configuração para Desenvolvimento
 
-Basta clonar ou fazer o download do repositório e mexer a vontade.
+Basta clonar ou fazer o *download* do repositório e mexer à vontade.
 
 ## Histórico de lançamentos
 * 0.0.5
-    * MUDANÇA: Correção do css (dashboar)
-    * ADIÇÃO: Adicionado as páginas de cadastro e edição de usuários
+    * MUDANÇA: Correção do CSS (*dashboard*)
+    * ADIÇÃO: Adicionadas as páginas de cadastro e edição de usuários
 * 0.0.4
-    * ADIÇÃO: Adicionado o main do dashboard(Não finalizado)
+    * ADIÇÃO: Adicionado o *main* do *dashboard* (não finalizado)
 * 0.0.3
-    * MUDANÇA: Correção do arquivo README.md
-    * ADIÇÃO: Scripts animate, maps, mask ao site principal
+    * MUDANÇA: Correção do arquivo `README.md`
+    * ADIÇÃO: *Scripts* animate, maps, mask ao *site* principal
 * 0.0.2
     * MUDANÇA: Correção do CSS.
 * 0.0.1
-    * Desenvolvimento Front-End
+    * Desenvolvimento *Front-End*
 
 ## Meta
 
