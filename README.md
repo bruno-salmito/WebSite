@@ -1,14 +1,11 @@
 # Website - Projeto Pessoal
 > Website desenvolvido para estudo
-
-> Projeto pessoal desenvolvido para fins de estudo.
-> Versão: 1.0
-
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
 >Website pessoal, single page que foi desenvolvido para fins de estudo das linguagens `[JavaScript]`,`[PHP]`,`[HTML]` e `[CSS]`.
+> Versão: 1.0
 
 <p align="center">
 <img width="70%" src="img/website.gif" alt="Website"/>
@@ -32,7 +29,9 @@ dashboard
 1. *config.php* => Contém as variáveis globais e configurações gerais
 2. *class/Guest.php*
 
-```css
+
+>Controle `CSS` das animações.
+~~~javascript
 /* --------------------------------------------------
 *    Animações
 *    Para usar as animações basta colocar na tag o
@@ -64,9 +63,10 @@ dashboard
     transform: translate3d(0, 0, 0);
 }
 
-```
+~~~
 
-```javascript
+>Controle `Javascript` das animações.
+~~~javascript
 /**
  * Função animeScroll 
  * Quando o usuário declarar o attributo data-anime ativa o scroll
@@ -89,11 +89,11 @@ function animeScroll() {
     })
 
 } //Fim da function animeScroll
-```
+~~~
 
-```php
+~~~php
 
-```
+~~~
 
 ## Próximas implatações
 
@@ -153,6 +153,8 @@ function animeScroll() {
 Basta clonar ou fazer o download do repositório e mexer a vontade.
 
 ## Histórico de lançamentos
+* 0.0.4
+    * ADIÇÃO: Adicionado o main do dashboard(Não finalizado)
 * 0.0.3
     * MUDANÇA: Correção do arquivo README.md
     * ADIÇÃO: Scripts animate, maps, mask ao site principal
@@ -169,10 +171,6 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 [https://github.com/bruno-salmito/github-link](https://github.com/bruno-salmito/)
 
-
-###############################
-### Editar abaixo
--> Modificar os 
 
 ## Contributing
 

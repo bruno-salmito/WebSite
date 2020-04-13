@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- TAG'S RESPONSIVO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TAG'S DIVERSOS -->
+    <meta charset="UTF-8">
+    <!-- TAG'S LINKS E FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <title>Painel de controle</title>
+</head>
+
+<body>
+    <!--Menu Superior-->
+    <header>
+        <div class="menu-section">
+            <div class="menu-toggle" title="Fechar Menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <!--menu-toggle-->
+        </div>
+        <!--menu-section-->
+
+        <div class="logout">
+            <a href=""><i title="Sair" class="fas fa-sign-out-alt"></i></a>
+        </div>
+        <!--logout-->
+        <div class="clear"></div>
+    </header>
+    <div class="clear"></div>
+
+
+    <!--Menu Lateral-->
+    <div class="asside">
+        <div class="center">
+            <div class="panelLogo" title="Logo da empresa">
+                <i class="fa fa-rocket"></i>
+                <span>Bruno Salmito</span>
+            </div>
+            <!--panelLogo-->
+
+            <div class="bar">
+                <span></span>
+            </div>
+            <!--bar-->
+
+            <div class="user">
+                <div class="userImg">
+                    <div class="iconeUser">
+                        <!--<i title="Bruno Salmito" class="fa fa-user"></i>-->
+                        <img src="../img/avatar.png" alt="Bruno Salmito">
+
+                    </div>
+                    <span>Bruno Salmito Filizola</span>
+                    <span>Administrador</span>
+                    <span><a href=""><i class="fa fa-home"></i></a></span>
+
+                </div>
+            </div>
+            <!--user-->
+            <div class="clear"></div>
+            <div class="bar">
+                <span></span>
+            </div>
+            <!--bar-->
+            <div class="assideMenu">
+                <h2>Cadastros</h2>
+                <i class="fa fa-plus"></i>
+                <ul data-asside="top">
+                    <li><a href="">Usuário</a></li>
+                    <li><a href="">Slider</a></li>
+                    <li><a href="">Depoimento</a></li>
+                    <li><a href="">Serviços</a></li>
+                    <li><a href="">Equipe</a></li>
+                    <li><a href="">Empresa</a></li>
+                </ul>
+            </div>
+            <!--assideMenu-->
+
+            <div class="assideMenu">
+                <h2>Relatórios</h2>
+                <i class="fa fa-plus"></i>
+                <ul data-asside="top">
+                    <li><a href="">Visitas</a></li>
+                    <li><a href="">E-Mail</a></li>
+                    <li><a href="">Leads</a></li>
+                </ul>
+            </div>
+            <!--assideMenu-->
+            <div class="bar">
+                <span></span>
+            </div>
+            <!--bar-->
+
+        </div>
+        <!--center-->
+
+    </div>
+    <!--asside-->
+    <div class="clear"></div>
+
+
+    <!--Conteúdo-->
+    <div class="content">
+        <div class="center">
+            <div class="information w100">
+                <div class="wraperInf left">
+                    <span>DashBoard - <b style="font-style: italic;">Nome Empresa</b></span>
+                </div>
+
+                <div class="wraperInf right">
+                    <span><strong>Home</strong> / Home</span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--information-->
+
+            <div class="contentBox w100">
+
+                <div class="singleMetric w25 left">
+                    <h2>150</h2>
+                    <p>Usuários Online</p>
+
+                    <i class="fa fa-user"></i>
+                    <div class="boxInfo">
+                        <span>Mais informações...</span>
+                    </div>
+                </div>
+                <!--singleMetric-->
+
+                <div class="singleMetric w25 left">
+                    <h2>230</h2>
+                    <p>Visitas Hoje</p>
+
+                    <i class="fa fa-users"></i>
+                    <div class="boxInfo">
+                        <span>Mais informações...</span>
+                    </div>
+                </div>
+                <!--singleMetric-->
+
+                <div class="singleMetric w25 left">
+                    <h2>1.150</h2>
+                    <p>Visitas mês</p>
+
+                    <i class="fas fa-map"></i>
+                    <div class="boxInfo">
+                        <span>Mais informações...</span>
+                    </div>
+                </div>
+                <!--singleMetric-->
+
+                <div class="singleMetric w25 left">
+                    <h2>150</h2>
+                    <p>Online</p>
+
+                    <i class="far fa-paper-plane"></i>
+                    <div class="boxInfo">
+                        <span>Mais informações...</span>
+                    </div>
+                </div>
+                <!--singleMetric-->
+                <div class="clear"></div>
+
+
+
+            </div>
+            <!--contetnBox-->
+            <div class="clear"></div>
+
+            <div class="contentBox w50 bgwithte left">
+                <h2>TEste</h2>
+            </div>
+            <!--contentBox w50-->
+
+            <div class="contentBox w50 bgwithte right">
+                <h2>Teste</h2>
+            </div>
+            <!--contentBox w50-->
+            <div class="clear"></div>
+
+            <div class="contentBox w100 bgwithte">
+                <h2>w100</h2>
+            </div>
+
+        </div>
+        <!--center-->
+    </div>
+    <div class="clear"></div>
+
+
+
+
+
+    <script>
+        let show = true;
+        let menuShow = true;
+
+        const menuToggle = document.querySelector('.menu-toggle');
+
+        function menu(element) {
+            document.querySelector(element).classList.toggle('on', show);
+        }
+
+        menuToggle.addEventListener('click', () => {
+            menu('.asside');
+            menu('header');
+            menu('.content');
+            menu('.menu-section');
+            show = !show;
+        })
+    </script>
+</body>
+
+</html>

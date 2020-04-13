@@ -1,0 +1,397 @@
+/*
+* Arquivo de estilização do painel de controle
+* Autor: Bruno Salmito
+* Versão: 0.0.1
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(217, 218, 219);
+}
+
+html {
+    /*1rem = 10px*/
+    font-size: 62.5%;
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.w50 {
+    width: 49.5%;
+}
+
+.w33 {
+    width: 33%;
+}
+
+.w25 {
+    width: 25%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.bgwithte {
+    background-color: #fff;
+    border-radius: .8rem;
+}
+
+/*------------------------------------------------
+* Header 
+*/
+header {
+    float: left;
+    position: fixed;
+    left: 30.0rem;
+    width: calc(100% - 30.0rem);
+    height: 6.0rem;
+    background-color: #fff;
+    z-index: 3;
+    transition: .8s ease;
+}
+
+header.on {
+    width: 100%;
+    left: 0;
+}
+
+header .menu-toggle {
+    float: left;
+    width: 4.0rem;
+    cursor: pointer;
+    margin: 1.0rem;
+    line-height: 6.0rem;
+}
+
+header .line {
+    width: 100%;
+    height: .6rem;
+    margin: .6rem 0;
+    background-color: #343A40;
+    transition: .8s ease-in;
+}
+
+header .menu-section.on .line:nth-of-type(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+header .menu-section.on .line:nth-of-type(2) {
+    opacity: 0;
+}
+
+header .menu-section.on .line:nth-of-type(3) {
+    transform: rotate(-45deg) translate(8px, -11px);
+}
+
+header .logout {
+    float: right;
+    margin: 1.4rem;
+}
+
+header .logout a {
+    text-decoration: none;
+    font-size: 2.6rem;
+    color: #343A40;
+    transition: .5s ease;
+}
+
+header .logout a:hover {
+    color: rgb(75, 83, 92);
+}
+
+/*------------------------------------------------
+* Asside 
+*/
+.asside {
+    float: left;
+    position: fixed;
+    width: 30.0rem;
+    height: 100%;
+    background-color: #343A40;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: .8s ease;
+    z-index: 2;
+}
+
+.asside.on {
+    width: 0;
+}
+
+.asside .panelLogo {
+    height: 5.9rem;
+    line-height: 5.9rem;
+}
+
+.asside .panelLogo i {
+    padding: 1.5rem 0;
+    font-size: 2.8rem;
+    color: rgb(189, 188, 188);
+}
+
+.asside .panelLogo span {
+    color: rgb(189, 188, 188);
+    font-size: 2.8rem;
+
+}
+
+.asside .panelLogo span::before {
+    content: '';
+    padding-left: 1.0rem;
+}
+
+.asside .bar span {
+    display: block;
+    width: 100%;
+    height: .1rem;
+    background-color: rgb(189, 188, 188);
+}
+
+.asside .user {
+    margin-top: 1.0rem;
+}
+
+.asside .user .iconeUser {
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+    border: .2rem solid rgb(30, 34, 37);
+    margin: 0 1.5rem 1.5rem;
+    position: relative;
+    float: left;
+}
+
+.asside .user .iconeUser img {
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.asside .user .iconeUser i {
+    font-size: 3.8rem;
+    color: rgb(30, 34, 37);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.asside .user span {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: left;
+    color: rgb(189, 188, 188);
+}
+
+.asside .user span:nth-of-type(1) {
+    padding-top: 1.3rem;
+}
+
+.asside .user span a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: rgb(189, 188, 188);
+}
+
+.asside .user span:nth-of-type(3) {
+    margin-top: .5rem;
+}
+
+.asside .assideMenu {
+    text-align: left;
+    position: relative;
+}
+
+.asside .assideMenu h2 {
+    font-size: 1.8rem;
+    padding: 1.0rem .5rem;
+    background-color: rgb(78, 87, 97);
+    color: rgb(189, 188, 188);
+}
+
+.asside .assideMenu i {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: rgb(189, 188, 188);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transform: rotate(45deg);
+    transition: .5s ease;
+}
+
+.asside .assideMenu ul {
+    list-style-type: none;
+    transition: .5s ease;
+}
+
+.asside .assideMenu ul li {
+    font-size: 1.4rem;
+    padding: 1.0rem 2.0rem;
+    transition: .3s ease-in;
+}
+
+.asside .assideMenu ul li:hover {
+    background-color: rgb(75, 83, 92);
+}
+
+.asside .assideMenu ul li a {
+    text-decoration: none;
+    color: rgb(189, 188, 188);
+    display: block;
+}
+
+.asside.on .panelLogo {
+    opacity: 0;
+}
+
+.asside.on .user {
+    opacity: 0;
+}
+
+.asside.on .assideMenu {
+    display: none;
+}
+
+.asside.on .bar {
+    opacity: 0;
+}
+
+.asside .assideMenu i:hover {
+    transform: rotate(0);
+}
+
+/*------------------------------------------------
+* Content 
+*/
+.content {
+    float: left;
+    position: relative;
+    width: calc(100% - 30.0rem);
+    top: 6.0rem;
+    left: 30.0rem;
+    transition: .8s ease;
+    z-index: 1;
+    padding: .5rem 1.0rem;
+}
+
+.content .information {
+    margin: 1.5rem 0 2.0rem;
+    width: 100%;
+}
+
+.content .information .wraperInf span {
+    font-size: 1.8rem;
+    color: #343A40;
+}
+
+.content .information .wraperInf strong {
+    border-bottom: .1rem solid #343A40;
+}
+
+.content .contentBox {
+    margin: 1.0rem 0;
+}
+
+.content .contentBox .singleMetric {
+    height: 12.0rem;
+    border-radius: .8rem;
+    border-right: .3rem solid rgb(217, 218, 219);
+    text-align: left;
+    padding: 1.0rem;
+    color: #343A40;
+    position: relative;
+}
+
+.content .contentBox .singleMetric:hover i {
+    transform: scale(1.1);
+}
+
+.content .contentBox .singleMetric:hover h2 {
+    transform: scale(1.1) translateX(1.5rem);
+}
+
+.content .contentBox .singleMetric:nth-of-type(1) {
+    background-color: #17A2B8;
+}
+
+.content .contentBox .singleMetric:nth-of-type(2) {
+    background-color: #40A846;
+}
+
+.content .contentBox .singleMetric:nth-of-type(3) {
+    background-color: #FEC354;
+}
+
+.content .contentBox .singleMetric:nth-of-type(4) {
+    background-color: #DC3D46;
+}
+
+.content .contentBox .singleMetric h2 {
+    font-size: 2.8rem;
+    transition: .8s ease;
+}
+
+.content .contentBox .singleMetric p {
+    margin-top: 1.4rem;
+    font-size: 1.4rem;
+}
+
+.content .contentBox .singleMetric i {
+    position: absolute;
+    right: 3.0rem;
+    top: 3.0rem;
+    font-size: 3.8rem;
+    transition: .5s ease;
+    filter: brightness(95%);
+}
+
+.content .contentBox .singleMetric .boxInfo {
+    position: absolute;
+    width: 90%;
+    padding: .5rem 0;
+    bottom: 0;
+    text-align: center;
+    border-top: .1rem solid white;
+}
+
+.content .contentBox .singleMetric .boxInfo span {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.content.on {
+    width: 100%;
+    left: 0;
+}
