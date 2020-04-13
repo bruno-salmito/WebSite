@@ -97,57 +97,55 @@ function animeScroll() {
 
 ## Próximas implatações
 
-#### Front-End
-* [  ] Website.
-* [ X ] Menu.
-      * [ X ] Menu site.
-      * [ X ] Menu mobile.
-* [ X ] Section Call.
-* [ X ] Section Services.
-* [ X ] Section Team.
-* [ X ] Section Testimony.
-* [ X ] Section Contact and Map.
-* [  ] Page Error.
-* [ X ] Animate.
-* [ X ] Mask Form.
-* [ X ] Google Maps.
+- [ ] Website.
+- [x] Menu.
+    - [x] Menu site.
+    - [x] Menu mobile.
+- [x] Section Call.
+- [x] Section Services.
+- [x] Section Team.
+- [x] Section Testimony.
+- [x] Section Contact and Map.
+- [ ] Page Error.
+- [x] Animate.
+- [x] Mask Form.
+- [x] Google Maps.
 
-* [  ] Dashboard.
-     * [ X ] Asside - Header - Content.
-     * [  ] Menu and pages.
-     * [  ] Page Error.
+- [ ] Dashboard.
+    - [ ] Asside - Header - Content.
+    - [ ] Menu and pages.
+    - [ ] Page Error.
 
 #### Back-End 
-* [  ] Website.
-* [  ] Friendly Url`s.
-* [  ] Config.php.
-* [  ] Load Page and 404 error.
-* [  ] Send form E-mail.
-     * [  ] PHPMayler.
-     * [  ] Class E-mail.
-     * [  ] Ajax form.
-     * [  ] Error/Success box.
-* [  ] Class Guest.
-     * [  ] + onlineGuest().
-     * [  ] + visits().
+- [ ] Website.
+- [ ] Friendly URLs.
+- [ ] `config.php`.
+- [ ] Load Page and 404 error.
+- [ ] Send form E-mail.
+    - [ ] PHPMayler.
+    - [ ] Class E-mail.
+    - [ ] Ajax form.
+    - [ ] Error/Success box.
+- [ ] Class Guest.
+    - [ ] + `onlineGuest()`.
+    - [ ] + `visits()`.
 
 
-* [  ] Dashboard.
-* [  ] Mysql class.
-* [  ] Painel class.
-     * [  ] + login().
-     * [  ] + loadPage().
-     * [  ] + permission().
-     * [  ] + getGroup().
-     * [  ] + warning().
-     * [  ] + logFile().
+- [ ] Dashboard.
+- [ ] Mysql class.
+- [ ] Painel class.
+    - [ ] + `login()`.
+    - [ ] + `loadPage()`.
+    - [ ] + `permission()`.
+    - [ ] + `getGroup()`.
+    - [ ] + `warning()`.
+    - [ ] + `logFile()`.
 
-* [  ] User class.
-     * [  ] + addUser().
-     * [  ] + updateUser().
-     * [  ] + deleteUser().
-* [  ] Sistema de permissões.
-
+- [ ] User class.
+    - [ ] + `addUser()`.
+    - [ ] + `updateUser()`.
+    - [ ] + `deleteUser()`.
+    
 ## Configuração para Desenvolvimento
 
 Basta clonar ou fazer o *download* do repositório e mexer à vontade.
