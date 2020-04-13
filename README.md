@@ -100,8 +100,8 @@ function animeScroll() {
 #### Front-End
 - [ ] Website.
 - [x] Menu.
-      - [x] Menu site.
-      - [x] Menu mobile.
+    - [x] Menu site.
+    - [x] Menu mobile.
 - [x] Section Call.
 - [x] Section Services.
 - [x] Section Team.
@@ -113,9 +113,9 @@ function animeScroll() {
 - [x] Google Maps.
 
 - [ ] Dashboard.
-     - [ ] Asside - Header - Content.
-     - [ ] Menu and pages.
-     - [ ] Page Error.
+    - [ ] Asside - Header - Content.
+    - [ ] Menu and pages.
+    - [ ] Page Error.
 
 #### Back-End 
 - [ ] Website.
@@ -123,29 +123,29 @@ function animeScroll() {
 - [ ] `config.php`.
 - [ ] Load Page and 404 error.
 - [ ] Send form E-mail.
-     - [ ] PHPMayler.
-     - [ ] Class E-mail.
-     - [ ] Ajax form.
-     - [ ] Error/Success box.
+    - [ ] PHPMayler.
+    - [ ] Class E-mail.
+    - [ ] Ajax form.
+    - [ ] Error/Success box.
 - [ ] Class Guest.
-     - [ ] + `onlineGuest()`.
-     - [ ] + `visits()`.
+    - [ ] + `onlineGuest()`.
+    - [ ] + `visits()`.
 
 
 - [ ] Dashboard.
 - [ ] Mysql class.
 - [ ] Painel class.
-     - [ ] + `login()`.
-     - [ ] + `loadPage()`.
-     - [ ] + `permission()`.
-     - [ ] + `getGroup()`.
-     - [ ] + `warning()`.
-     - [ ] + `logFile()`.
+    - [ ] + `login()`.
+    - [ ] + `loadPage()`.
+    - [ ] + `permission()`.
+    - [ ] + `getGroup()`.
+    - [ ] + `warning()`.
+    - [ ] + `logFile()`.
 
 - [ ] User class.
-     - [ ] + `addUser()`.
-     - [ ] + `updateUser()`.
-     - [ ] + `deleteUser()`.
+    - [ ] + `addUser()`.
+    - [ ] + `updateUser()`.
+    - [ ] + `deleteUser()`.
 
 
 ## Configuração para Desenvolvimento
