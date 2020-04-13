@@ -88,7 +88,7 @@ function animeScroll() {
         }
     })
 
-} //Fim da function animeScroll
+} // Fim da function animeScroll
 ~~~
 
 ~~~php
@@ -150,21 +150,21 @@ function animeScroll() {
 
 ## Configuração para Desenvolvimento
 
-Basta clonar ou fazer o download do repositório e mexer a vontade.
+Basta clonar ou fazer o *download* do repositório e mexer à vontade.
 
 ## Histórico de lançamentos
 * 0.0.5
-    * MUDANÇA: Correção do css (dashboar)
-    * ADIÇÃO: Adicionado as páginas de cadastro e edição de usuários
+    * MUDANÇA: Correção do CSS (*dashboard*)
+    * ADIÇÃO: Adicionadas as páginas de cadastro e edição de usuários
 * 0.0.4
-    * ADIÇÃO: Adicionado o main do dashboard(Não finalizado)
+    * ADIÇÃO: Adicionado o *main* do *dashboard* (não finalizado)
 * 0.0.3
-    * MUDANÇA: Correção do arquivo README.md
-    * ADIÇÃO: Scripts animate, maps, mask ao site principal
+    * MUDANÇA: Correção do arquivo `README.md`
+    * ADIÇÃO: *Scripts* animate, maps, mask ao *site* principal
 * 0.0.2
     * MUDANÇA: Correção do CSS.
 * 0.0.1
-    * Desenvolvimento Front-End
+    * Desenvolvimento *Front-End*
 
 ## Meta
 
