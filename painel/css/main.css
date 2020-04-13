@@ -49,6 +49,10 @@ html {
     width: 25%;
 }
 
+.w10 {
+    width: 10%;
+}
+
 .left {
     float: left;
 }
@@ -258,8 +262,9 @@ header .logout a:hover {
 
 .asside .assideMenu ul li {
     font-size: 1.4rem;
-    padding: 1.0rem 2.0rem;
+    padding: .5rem 2.0rem;
     transition: .3s ease-in;
+    text-transform: uppercase;
 }
 
 .asside .assideMenu ul li:hover {
@@ -306,6 +311,55 @@ header .logout a:hover {
     padding: .5rem 1.0rem;
 }
 
+.content .msgError {
+    width: 250px;
+    height: 2.0rem;
+    line-height: 2.0rem;
+    background-color: #ccc;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.548);
+}
+
+.content .msgError i {
+    font-size: 1.4rem;
+    padding: .3rem 1.0rem;
+    float: left;
+    background-color: red;
+    color: white;
+}
+
+.content .msgError span {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.content .msgSuccess {
+    width: 250px;
+    height: 2.0rem;
+    line-height: 2.0rem;
+    background-color: #ccc;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0, 128, 0, 0.548);
+}
+
+.content .msgSuccess i {
+    font-size: 1.4rem;
+    padding: .3rem 1.0rem;
+    float: left;
+    background-color: green;
+    color: white;
+}
+
+.content .msgSuccess span {
+    color: white;
+    font-size: 1.4rem;
+}
+
+
 .content .information {
     margin: 1.5rem 0 2.0rem;
     width: 100%;
@@ -321,7 +375,7 @@ header .logout a:hover {
 }
 
 .content .contentBox {
-    margin: 1.0rem 0;
+    margin: 1.0rem 0 0 0;
 }
 
 .content .contentBox .singleMetric {
@@ -391,7 +445,152 @@ header .logout a:hover {
     cursor: pointer;
 }
 
+.content .contentBox .callBox {
+    text-align: left;
+    color: #343A40;
+    margin: 2.4rem 0 .3rem 2.0rem;
+}
+
+
+.content .contentBox .callBox i {
+    font-size: 2.4rem;
+    padding: .8rem 1.5rem;
+    transition: .5s ease;
+}
+
+.content .contentBox .callBox span {
+    font-size: 1.8rem;
+}
+
+.content .contentBox .tableBox {
+    width: 100%;
+    color: #343A40;
+    padding: 1.0rem;
+}
+
+.content .contentBox .tableBox .row {
+    width: 100%;
+    height: 2.0rem;
+    font-size: 1.2rem;
+}
+
+.content .contentBox .tableBox .row .col span a img {
+    width: 1.8rem;
+}
+
+.content .contentBox .tableBox .row:nth-of-type(1) {
+    line-height: 2.0rem;
+    border-bottom: 1px solid rgb(119, 133, 148);
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+    background-color: #17A2B8;
+}
+
+.content .contentBox .tableBox .row:nth-of-type(2n + 2) {
+    background-color: rgb(209, 209, 209);
+}
+
+.content .contentBox .tableBox .row i {
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.content .contentBox .callBox:hover i {
+    transform: scale(1.2);
+}
+
+.content .contentBox .tableBox .row i:hover {
+    transform: rotate(45deg);
+}
+
+.content .contentBox .cadUser {
+    text-align: left;
+    padding: 1.0rem;
+    color: #343A40;
+}
+
+.content .contentBox .cadUser .inputBox {
+    padding: 1.0rem;
+}
+
+.content .contentBox .cadUser .inputBox label {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: .3rem;
+}
+
+.content .contentBox .cadUser .inputBox input {
+    width: 100%;
+    height: 4.0rem;
+    padding-left: 1.0rem;
+    line-height: 4.0rem;
+    border-radius: .3rem;
+    outline: none;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+}
+
+.content .contentBox .cadUser .inputBox input:focus {
+    background-color: rgba(71, 76, 80, 0.363);
+}
+
+.content .contentBox .cadUser .inputBox input[type=submit] {
+    background-color: #343A40;
+    color: rgb(201, 205, 209);
+    font-size: 1.8rem;
+    transition: .8s ease;
+}
+
+.content .contentBox .cadUser .inputBox input[type=submit]:hover {
+    background-color: rgb(156, 159, 161);
+    color: #343A40;
+}
+
+.content .contentBox .cadUser .photoUserNow {
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.content .contentBox .cadUser .photoUserNow img {
+    width: 250px;
+    height: 250px;
+    border: 1px solid #343A40;
+    border-radius: 50%;
+}
+
 .content.on {
     width: 100%;
     left: 0;
+}
+
+[data-anime] {
+    opacity: 0;
+    transition: .8s ease;
+}
+
+[data-anime="warning"] {
+    transform: translate3d(250px, -50px, 0);
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime="bottom"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anime].animateContent {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
 }

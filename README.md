@@ -153,6 +153,9 @@ function animeScroll() {
 Basta clonar ou fazer o download do repositório e mexer a vontade.
 
 ## Histórico de lançamentos
+* 0.0.5
+    * MUDANÇA: Correção do css (dashboar)
+    * ADIÇÃO: Adicionado as páginas de cadastro e edição de usuários
 * 0.0.4
     * ADIÇÃO: Adicionado o main do dashboard(Não finalizado)
 * 0.0.3
