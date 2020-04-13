@@ -113,7 +113,7 @@ function animeScroll() {
 * [ X ] Google Maps.
 
 * [  ] Dashboard.
-     * [  ] Asside - Header - Content.
+     * [ X ] Asside - Header - Content.
      * [  ] Menu and pages.
      * [  ] Page Error.
 
@@ -146,7 +146,7 @@ function animeScroll() {
      * [  ] + addUser().
      * [  ] + updateUser().
      * [  ] + deleteUser().
-
+* [  ] Sistema de permissões.
 
 ## Configuração para Desenvolvimento
 

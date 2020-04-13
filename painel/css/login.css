@@ -1,0 +1,109 @@
+/*
+* Estilização da página de login para o painel de controle
+* Autor: Bruno Salmito
+* Versão: 0.0.1
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(to right bottom, #7159c1, #634dad, #56419a, #493587, #3c2a74);
+    filter: brightness(90%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container form {
+    width: 100%;
+    max-width: 380px;
+    padding: 7.0rem 4.0rem 4.0rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 1.0rem;
+    color: #fff;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+    position: relative;
+
+}
+
+.container form img {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    border-radius: 50%;
+}
+
+.container form h2 {
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 2.8rem;
+    margin-bottom: 2.0rem;
+}
+
+.container form .inputBox {
+    position: relative;
+}
+
+.container form .inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 3.0rem;
+    border: none;
+    border-bottom: .1rem solid white;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+.container form .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.6rem;
+    padding: 1.0rem 0;
+    pointer-events: none;
+    transition: .5s ease-in-out;
+}
+
+.container form .inputBox input:focus+label,
+.container form .inputBox input:valid+label {
+    transform: translateY(-20px);
+    color: rgb(184, 184, 184);
+    font-size: 1.2rem;
+}
+
+.container form input[type=submit] {
+    width: 10.0rem;
+    height: 4.0rem;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    background-color: #56419a;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.container form input[type=submit]:hover {
+    background-color: #7159c1;
+}
