@@ -112,15 +112,17 @@ function animeScroll() {
 - [x] Google Maps.
 
 - [ ] Dashboard.
-    - [ ] Asside - Header - Content.
-    - [ ] Menu and pages.
+    - [x] Asside - Header - Content.
+    - [x] Menu and pages.
     - [ ] Page Error.
-
+    - [ ] Animate login page.
+    
 #### Back-End 
 - [ ] Website.
-- [ ] Friendly URLs.
+- [x] Friendly URLs.
 - [ ] `config.php`.
 - [ ] Load Page and 404 error.
+- [ ] Forget Password.
 - [ ] Send form E-mail.
     - [ ] PHPMayler.
     - [ ] Class E-mail.
@@ -151,6 +153,10 @@ function animeScroll() {
 Basta clonar ou fazer o *download* do repositório e mexer à vontade.
 
 ## Histórico de lançamentos
+* 0.0.6
+    * ADIÇÃO: Adicionado suporte a url`s amigáveis.
+    * ADIÇÃO: Adicionado o PHPMailer/=.
+    * ADIÇÃO: Adicionado config.php.
 * 0.0.5
     * MUDANÇA: Correção do CSS (*dashboard*)
     * ADIÇÃO: Adicionadas as páginas de cadastro e edição de usuários
