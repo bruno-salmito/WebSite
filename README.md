@@ -27,15 +27,64 @@
 🚀 __*PHP*__ -> Nas pastas class, e na raiz deste projeto encontra-se os arquivos necessários para controle do backend do site e 
 dashboard
 1. *config.php* => Contém as variáveis globais e configurações gerais
-2. *class/Guest.php*
+2. *class/Guest.php* => Classe que contém os métodos para registrar os usuários online e o livro de visitas
+3. *class/Mysql.php* => Classe que contém os métodos para conectar ao banco de dados.
+4. *class/Email.php* => Classe que trata, adiciona e envia os e-mail`s.
 
+> Configuração-> Para usar este projeto você precisa alterar o arquivo `config.php` e alterar/incluir
+> as variáveis `INCLUDE_PATH`, `INCLUDE_PATH_PANEL`, variáveis ref. ao acesso ao Banco de dados.
+1.  __INCLUDE_PATH__ => Variável com o caminho do diretório principal do site.
+2.  __INCLUDE_PATH_PANEL__ => Variável com o caminho do diretório do painel de controle.
+3.  __DSN__ => Tipo do banco de dados que você esta utilizando.
+4.  __DBNAME__ => Nome do banco de dados.
+5.  __USERDB__ => Usuário do banco de dados.
+6.  __PASSDB__ => Senha do banco de dados.
 
->Controle `CSS` das animações.
-~~~javascript
+~~~php
+#Config.php
+# Variáveis globais
+define('INCLUDE_PATH', 'http://localhost/danki/back-end/projeto_01.2/');
+define('INCLUDE_PATH_PANEL', INCLUDE_PATH . 'painel/');
+
+# Definições do banco de dados
+define('DSN', 'mysql:host=localhost;');
+define('DBNAME', 'dbname=website');
+define('USERDB', 'root');
+define('PASSDB', '');
+define('ERRORDB', '');
+~~~
+
+> Classe para controlar o acesso ao banco de dados.
+~~~php
+#class/Mysql.php
+class Mysql
+{
+    private static $pdo;
+
+    public static function connect()
+    {
+        if (self::$pdo == null) {
+            //Caso ainda não tenha sido instanciada
+            try {
+                self::$pdo = new PDO(DSN . DBNAME, USERDB, PASSDB, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+                self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            } catch (Exception $e) {
+                // Algo de errado aconteceu
+                echo '<h2>Erro ao conectar</h2>';
+            }
+        }
+        return self::$pdo;
+    } //Fim do connect
+}//fim Mysql
+~~~
+
+> Define o comportamento das animações do site principal
+~~~css
 /* --------------------------------------------------
 *    Animações
 *    Para usar as animações basta colocar na tag o
 *    Atributo data-anime
+*    css/style.css
 */
 [data-anime] {
     opacity: 0;
@@ -62,10 +111,9 @@ dashboard
     opacity: 1;
     transform: translate3d(0, 0, 0);
 }
-
 ~~~
 
->Controle `Javascript` das animações.
+> Controla o scroll e animações setadas no css do site principal
 ~~~javascript
 /**
  * Função animeScroll 
@@ -89,10 +137,6 @@ function animeScroll() {
     })
 
 } // Fim da function animeScroll
-~~~
-
-~~~php
-
 ~~~
 
 ## Próximas implatações
@@ -120,7 +164,7 @@ function animeScroll() {
 #### Back-End 
 - [ ] Website.
 - [x] Friendly URLs.
-- [ ] `config.php`.
+- [x] `config.php`.
 - [ ] Load Page and 404 error.
 - [ ] Forget Password.
 - [ ] Send form E-mail.
@@ -128,9 +172,10 @@ function animeScroll() {
     - [ ] Class E-mail.
     - [ ] Ajax form.
     - [ ] Error/Success box.
-- [ ] Class Guest.
-    - [ ] + `onlineGuest()`.
-    - [ ] + `visits()`.
+- [x] Class Guest.
+    - [x] + `guestOnline()`.
+    - [x] + `visitor()`.
+    - [x] + `detectMobile()`.    
 
 
 - [ ] Dashboard.
@@ -147,12 +192,19 @@ function animeScroll() {
     - [ ] + `addUser()`.
     - [ ] + `updateUser()`.
     - [ ] + `deleteUser()`.
-    
+
+- [ ] Company class.
+
+     
 ## Configuração para Desenvolvimento
 
 Basta clonar ou fazer o *download* do repositório e mexer à vontade.
 
 ## Histórico de lançamentos
+* 0.0.7
+    * ADIÇÃO: Adicionado controle de visitantes e contador de visitas através da classe Guest.
+    * ADIÇÃO: Controle de conexão ao banco de dados através da classe Mysql.php.
+    * MUDANÇA: Adicionado no `index.php` as chamadas para os métodos na classe Guest.
 * 0.0.6
     * ADIÇÃO: Adicionado suporte a url`s amigáveis.
     * ADIÇÃO: Adicionado o PHPMailer/=.

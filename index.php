@@ -1,3 +1,8 @@
+<?php
+include_once('config.php');
+Guest::visitor();
+Guest::guestOnline();
+?>
 <!DOCTYPE html>
 <!-- 
     Projeto desenvolvido para fins de estudo das linguagens PHP/JavaScript/Mysql
@@ -17,8 +22,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Links e fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/style.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/all.css">
 
     <!-- TAG'S diversas -->
     <meta charset="UTF-8">
@@ -28,6 +33,8 @@
 <body>
 
     <header>
+
+
         <div class="center">
             <div class="logo">
                 <i class="fa fa-rocket"></i>
@@ -47,7 +54,7 @@
                         <li><a href="">Sobre</a></li>
                         <li><a href="">Serviços</a></li>
                         <li><a href="">Contato</a></li>
-                        <li><a href="">Login</a></li>
+                        <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>" target="_blank">Login</a></li>
                     </ul>
                 </nav>
             </div>
@@ -57,8 +64,14 @@
         </div>
         <!--center-->
     </header>
-
+    <!--
+    <div class="warningError">
+        <i class="fa fa-info"></i>
+        <span>Ok Sucesso</span>
+    </div>
+-->
     <section class="call">
+
         <span class="skewed"></span>
         <div class="center">
 
@@ -71,7 +84,7 @@
                         <form method="POST">
                             <div class="inputBox">
                                 <input type="email" name="email" placeholder="Seu e-mail" required>
-                                <input type="submit" value="Orçamento">
+                                <input type="submit" value="Orçamento" name="acao">
                                 <label>*Informe o seu melhor e-mail</label>
                             </div>
                             <div class="clear"></div>
@@ -289,12 +302,12 @@
 
 
     <!-- Inclusão dos scripts -->
-    <script src="js/principal.js"></script>
-    <script src="js/mask.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/animate.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/principal.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/mask.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/menu.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/animate.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9j0Zd3F40EqQT8bvfbDN476fXnwhN7LY"></script>
-    <script src="js/maps.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/maps.js"></script>
 </body>
 
 </html>

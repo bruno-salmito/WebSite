@@ -24,4 +24,11 @@ spl_autoload_register($autoloader);
 
 # Variáveis globais
 define('INCLUDE_PATH', 'http://localhost/danki/back-end/projeto_01.2/');
-define('INCLUDE_PATH_PANEL', INCLUDE_PATH . 'painel');
+define('INCLUDE_PATH_PANEL', INCLUDE_PATH . 'painel/');
+
+# Definições do banco de dados
+define('DSN', 'mysql:host=localhost;');
+define('DBNAME', 'dbname=website');
+define('USERDB', 'root');
+define('PASSDB', '');
+define('ERRORDB', '');

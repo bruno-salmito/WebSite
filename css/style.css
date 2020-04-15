@@ -35,6 +35,66 @@ html {
     clear: both;
 }
 
+.warningSuccess {
+    position: fixed;
+    top: 10.0rem;
+    left: 0;
+    z-index: 999;
+    width: 25.0rem;
+    background-color: rgba(4, 155, 4, 0.801);
+    border-radius: .2rem;
+    animation: warning .8s ease-in;
+
+}
+
+.warningSuccess i {
+    padding: 1.0rem;
+    font-size: 1.6rem;
+    color: rgb(13, 150, 13);
+    background-color: rgb(13, 100, 5);
+
+}
+
+.warningSuccess span {
+    font-size: 1.4rem;
+    color: rgb(13, 82, 13);
+}
+
+.warningError {
+    position: fixed;
+    top: 10.0rem;
+    left: 0;
+    z-index: 999;
+    width: 25.0rem;
+    background-color: rgba(155, 4, 4, 0.801);
+    border-radius: .2rem;
+    animation: warning .8s ease-in;
+
+}
+
+.warningError i {
+    padding: 1.0rem;
+    font-size: 1.6rem;
+    color: rgb(150, 13, 13);
+    background-color: rgb(100, 5, 5);
+
+}
+
+.warningError span {
+    font-size: 1.4rem;
+    color: rgb(82, 13, 13);
+}
+
+@keyframes warning {
+    0% {
+        left: -300px
+    }
+
+    100% {
+        left: 0
+    }
+}
+
 /*----------------------------------------------------
 * Header
 */
@@ -48,6 +108,7 @@ header {
     transition: all .5s ease;
     z-index: 2;
 }
+
 
 header.on {
     background-color: #fff;
