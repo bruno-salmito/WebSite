@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-<img width="70%" src="img/dashboard" alt="DashBoard"/>
+<img width="70%" src="img/dashboard.jpg" alt="DashBoard"/>
 </p>
 
 ## Arquivos site principal
