@@ -11,6 +11,13 @@
 <img width="70%" src="img/website.gif" alt="Website"/>
 </p>
 
+<p align="center">
+<img width="70%" src="img/login_page.jpg" alt="Login Page"/>
+</p>
+
+<p align="center">
+<img width="70%" src="img/dashboard" alt="DashBoard"/>
+</p>
 
 ## Arquivos site principal
 🚀 __*JS*__ -> Na pasta `js` estão localizados todos os scripts do site principal.
@@ -19,6 +26,7 @@
 3. *js/mask.js* => Script que adiciona uma mascará aos formulários
 4. *js/menu.js* => Script que controla o menu mobile
 5. *js/scrollMenu.js* => Script que adiciona um efeito ao header do site.
+6. *js/ajax.js* => Pega os dados do formulário e passa via ajax para o arquivo `ajax/formSend.php`;
 
 🚀 __*CSS*__ -> Na pasta `css` estão localizados todos os arquivos de css do site principal
 1. *css/all.css* => Arquivo de estilo do fontawsome
@@ -30,6 +38,8 @@ dashboard
 2. *class/Guest.php* => Classe que contém os métodos para registrar os usuários online e o livro de visitas
 3. *class/Mysql.php* => Classe que contém os métodos para conectar ao banco de dados.
 4. *class/Email.php* => Classe que trata, adiciona e envia os e-mail`s.
+5. *ajax/formSend.php* => Envia os dados recebidos via ajax para o e-mail.
+
 
 > Configuração-> Para usar este projeto você precisa alterar o arquivo `config.php` e alterar/incluir
 > as variáveis `INCLUDE_PATH`, `INCLUDE_PATH_PANEL`, variáveis ref. ao acesso ao Banco de dados.
@@ -154,6 +164,8 @@ function animeScroll() {
 - [x] Animate.
 - [x] Mask Form.
 - [x] Google Maps.
+- [x] Loader send form.
+- [x] Warning msg send.
 
 - [ ] Dashboard.
     - [x] Asside - Header - Content.
@@ -201,6 +213,11 @@ function animeScroll() {
 Basta clonar ou fazer o *download* do repositório e mexer à vontade.
 
 ## Histórico de lançamentos
+* 0.0.8
+    * ADIÇÃO: Adicionado do Loader durante o envio do formulário `CSS`.
+    * ADIÇÃO: Adicionado o arquivo `ajax/formSend.php` para enviar e-mail do formulário.
+    * ADIÇÃO: Adicionado o script `js/ajax.js` para controlar o envio via ajax(Json) dos formulários no site principal.
+    * MUDANÇA: Alterado a cor no `CSS` dos warnings msg.
 * 0.0.7
     * ADIÇÃO: Adicionado controle de visitantes e contador de visitas através da classe Guest.
     * ADIÇÃO: Controle de conexão ao banco de dados através da classe Mysql.php.

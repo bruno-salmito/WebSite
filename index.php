@@ -3,6 +3,7 @@ include_once('config.php');
 Guest::visitor();
 Guest::guestOnline();
 ?>
+
 <!DOCTYPE html>
 <!-- 
     Projeto desenvolvido para fins de estudo das linguagens PHP/JavaScript/Mysql
@@ -31,7 +32,9 @@ Guest::guestOnline();
 </head>
 
 <body>
-
+    <div class="loader">
+        <img src="<?php echo INCLUDE_PATH; ?>img/loader.gif">
+    </div>
     <header>
 
 
@@ -64,12 +67,18 @@ Guest::guestOnline();
         </div>
         <!--center-->
     </header>
-    <!--
+
     <div class="warningError">
         <i class="fa fa-info"></i>
-        <span>Ok Sucesso</span>
+        <!--<span>Ops! algo de errado aconteceu</span>-->
     </div>
--->
+
+    <div class="warningSuccess">
+        <i class="fa fa-info"></i>
+
+    </div>
+
+
     <section class="call">
 
         <span class="skewed"></span>
@@ -106,7 +115,7 @@ Guest::guestOnline();
                 </div>
             </div>
             <!--callImg-->
-            <div class="clea"></div>
+            <div class="clear"></div>
         </div>
         <!--center-->
     </section>
@@ -308,6 +317,9 @@ Guest::guestOnline();
     <script src="<?php echo INCLUDE_PATH; ?>js/animate.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9j0Zd3F40EqQT8bvfbDN476fXnwhN7LY"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/maps.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/ajax.js"></script>
+
 </body>
 
 </html>
