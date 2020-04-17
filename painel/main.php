@@ -1,3 +1,15 @@
+<?php
+if (Painel::login() == false) {
+    header('Location', INCLUDE_PATH_PANEL);
+    die();
+}
+if (isset($_GET['logout'])) {
+    Painel::logout();
+    Painel::redirect();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,8 +20,8 @@
     <meta charset="UTF-8">
     <!-- TAG'S LINKS E FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PANEL; ?>css/main.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/all.css">
     <title>Painel de controle</title>
 </head>
 
@@ -27,7 +39,7 @@
         <!--menu-section-->
 
         <div class="logout">
-            <a href=""><i title="Sair" class="fas fa-sign-out-alt"></i></a>
+            <a href="<?php echo INCLUDE_PATH_PANEL; ?>?logout"><i title="Sair" class="fas fa-sign-out-alt"></i></a>
         </div>
         <!--logout-->
         <div class="clear"></div>
@@ -40,7 +52,7 @@
         <div class="center">
             <div class="panelLogo" title="Logo da empresa">
                 <i class="fa fa-rocket"></i>
-                <span>Bruno Salmito</span>
+                <span><?php echo Painel::getCompany(); ?></span>
             </div>
             <!--panelLogo-->
 
@@ -53,12 +65,12 @@
                 <div class="userImg">
                     <div class="iconeUser">
                         <!--<i title="Bruno Salmito" class="fa fa-user"></i>-->
-                        <img src="../img/avatar.png" alt="Bruno Salmito">
+                        <img src="<?php echo INCLUDE_PATH_PANEL; ?>uploads/users/<?php echo $_SESSION['img']; ?>" alt="<?php echo $_SESSION['name']; ?>">
 
                     </div>
-                    <span>Bruno Salmito Filizola</span>
-                    <span>Administrador</span>
-                    <span><a href=""><i class="fa fa-home"></i></a></span>
+                    <span><?php echo $_SESSION['name']; ?></span>
+                    <span><?php echo Painel::getCargo($_SESSION['grupo']); ?></span>
+                    <span><a href="<?php echo INCLUDE_PATH_PANEL; ?>"><i class="fa fa-home"></i></a></span>
 
                 </div>
             </div>
@@ -72,12 +84,20 @@
                 <h2>Cadastros</h2>
                 <i class="fa fa-plus"></i>
                 <ul data-asside="top">
-                    <li><a href="">Usuário</a></li>
-                    <li><a href="">Slider</a></li>
-                    <li><a href="">Depoimento</a></li>
-                    <li><a href="">Serviços</a></li>
-                    <li><a href="">Equipe</a></li>
-                    <li><a href="">Empresa</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>cadUser">Usuário</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>cadSlider">Slider</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>cadDep">Depoimento</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>cadServ">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>cadTeam">Equipe</a></li>
+                </ul>
+            </div>
+            <!--assideMenu-->
+            <div class="assideMenu">
+                <h2>Editar</h2>
+                <i class="fa fa-plus"></i>
+                <ul data-asside="top">
+                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>editUser">Usuário</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>editComp">Empresa</a></li>
                 </ul>
             </div>
             <!--assideMenu-->
@@ -122,6 +142,7 @@
 -->
         <div class="center">
 
+            <?php Painel::loadPage(); ?>
 
 
         </div>

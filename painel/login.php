@@ -14,10 +14,17 @@
 </head>
 
 <body>
+    <div class="loader">
+        <img src="<?php echo INCLUDE_PATH; ?>img/loader.gif">
+    </div>
 
+    <div class="msgErro">
+        <i class="fa fa-info"></i>
+        <span>Verifique seu usuário e senha</span>
+    </div>
 
     <div class="container">
-        <form method="POST">
+        <form method="POST" autocomplete="off">
             <img src="../img/avatar.png" alt="">
             <h2>Entrar</h2>
             <div class="inputBox">
@@ -29,10 +36,12 @@
                 <input type="password" name="password" id="password" required>
                 <label for="login">Senha</label>
             </div>
-            <input type="submit" value="Entrar" name="acao">
+            <input type="submit" value="Entrar" name="logar">
         </form>
     </div>
     <!--container-->
+    <script src="<?php echo INCLUDE_PATH_PANEL; ?>js/jquery.js"></script>
+    <script src="<?php echo INCLUDE_PATH_PANEL; ?>js/loginAjax.js"></script>
 </body>
 
 </html>

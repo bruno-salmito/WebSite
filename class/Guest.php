@@ -64,7 +64,7 @@ class Guest
 
             // Alterar o tempo do cookie
             //setcookie("guest", "true", time() + (60 * 60 * 24 * 30));
-            setcookie("guest", "true", time() + (60 * 60 * 24));
+            setcookie("guest", "true", time() + (60 * 60 * 24 * 30));
         }
     } //visitor
 

@@ -36,8 +36,6 @@ Guest::guestOnline();
         <img src="<?php echo INCLUDE_PATH; ?>img/loader.gif">
     </div>
     <header>
-
-
         <div class="center">
             <div class="logo">
                 <i class="fa fa-rocket"></i>
@@ -54,9 +52,9 @@ Guest::guestOnline();
                 <!--menu-toggle-->
                 <nav>
                     <ul>
-                        <li><a href="">Sobre</a></li>
-                        <li><a href="">Serviços</a></li>
-                        <li><a href="">Contato</a></li>
+                        <li><a href="#services">Sobre</a></li>
+                        <li><a href="#team">Serviços</a></li>
+                        <li><a href="#contact">Contato</a></li>
                         <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>" target="_blank">Login</a></li>
                     </ul>
                 </nav>
@@ -120,7 +118,7 @@ Guest::guestOnline();
         <!--center-->
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="center">
             <h1 data-anime="top">Controle completo para sua empresa</h1>
             <h2 data-anime="left">Assuma o controle de sua empresa. Veja alguns de nossos recursos.</h2>
@@ -202,7 +200,7 @@ Guest::guestOnline();
         <!--center-->
     </section>
 
-    <section class="team">
+    <section class="team" id="team">
         <div class="center">
             <h2 data-anime="top">conheça nossa equipe</h2>
             <p data-anime="left">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam dolorem magnam soluta
@@ -270,7 +268,7 @@ Guest::guestOnline();
         <!--center-->
     </section>
 
-    <section class="contact" data-anime="bottom">
+    <section class="contact" data-anime="bottom" id="contact">
         <div class="center">
             <div class="boxForm" da>
                 <h2>Entre em contato</h2>
@@ -319,6 +317,19 @@ Guest::guestOnline();
     <script src="<?php echo INCLUDE_PATH; ?>js/maps.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/ajax.js"></script>
+
+    <script>
+        // Monitora o click em todos os links que em seu href contém #
+        $('nav a[href^="#"]').on('click', function(e) {
+            e.preventDefault();
+            var id = $(this).attr('href');
+            var targetOffset = $(id).offset().top;
+
+            $('html,body').animate({
+                scrollTop: targetOffset - 60
+            }, 600);
+        });
+    </script>
 
 </body>
 

@@ -179,11 +179,11 @@ function animeScroll() {
 - [x] `config.php`.
 - [ ] Load Page and 404 error.
 - [ ] Forget Password.
-- [ ] Send form E-mail.
-    - [ ] PHPMayler.
-    - [ ] Class E-mail.
-    - [ ] Ajax form.
-    - [ ] Error/Success box.
+- [x] Send form E-mail.
+    - [x] PHPMayler.
+    - [x] Class E-mail.
+    - [x] Ajax form.
+    - [x] Error/Success box.
 - [x] Class Guest.
     - [x] + `guestOnline()`.
     - [x] + `visitor()`.
@@ -191,14 +191,17 @@ function animeScroll() {
 
 
 - [ ] Dashboard.
-- [ ] Mysql class.
+- [x] Mysql class.
 - [ ] Painel class.
-    - [ ] + `login()`.
-    - [ ] + `loadPage()`.
+    - [x] + `login()`.
+    - [x] + `loadPage()`.
     - [ ] + `permission()`.
-    - [ ] + `getGroup()`.
+    - [x] + `getGroup()`.
     - [ ] + `warning()`.
     - [ ] + `logFile()`.
+    - [x] + `listUserOnline()`.
+    - [x] + `listGuestDay()`.
+    - [x] + `listGeustMonth()`.
 
 - [ ] User class.
     - [ ] + `addUser()`.
@@ -213,6 +216,9 @@ function animeScroll() {
 Basta clonar ou fazer o *download* do repositório e mexer à vontade.
 
 ## Histórico de lançamentos
+* 0.0.9
+    * ADIÇÃO: Adicionado o arquivo `painel/loginAjax.js` e `ajax/loginSend.php` controle de login via ajax.
+    * ADIÇÃO: Adicionado contador de visitas, e usuários online.
 * 0.0.8
     * ADIÇÃO: Adicionado do Loader durante o envio do formulário `CSS`.
     * ADIÇÃO: Adicionado o arquivo `ajax/formSend.php` para enviar e-mail do formulário.
