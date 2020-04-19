@@ -14,6 +14,7 @@ $('body').on('submit', 'form', function () {
         if (data.success) {
             //Tudo certo
             $('.loader').fadeOut();
+            console.log(data.msg);
             window.location.href = include_path + "painel";
         } else {
             //Erro ao logar

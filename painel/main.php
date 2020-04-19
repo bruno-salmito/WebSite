@@ -3,10 +3,12 @@ if (Painel::login() == false) {
     header('Location', INCLUDE_PATH_PANEL);
     die();
 }
+
 if (isset($_GET['logout'])) {
     Painel::logout();
     Painel::redirect();
 }
+
 
 ?>
 
@@ -26,6 +28,9 @@ if (isset($_GET['logout'])) {
 </head>
 
 <body>
+    <div class="loader">
+        <img src="<?php echo INCLUDE_PATH; ?>img/loader.gif">
+    </div>
     <!--Menu Superior-->
     <header>
         <div class="menu-section">
@@ -106,9 +111,9 @@ if (isset($_GET['logout'])) {
                 <h2>Relatórios</h2>
                 <i class="fa fa-plus"></i>
                 <ul data-asside="top">
-                    <li><a href="">Visitas</a></li>
-                    <li><a href="">E-Mail</a></li>
-                    <li><a href="">Leads</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>visitas">Visitas</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>email">E-Mail</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>contatos">Leads</a></li>
                 </ul>
             </div>
             <!--assideMenu-->
@@ -148,9 +153,15 @@ if (isset($_GET['logout'])) {
         </div>
         <!--center-->
 
-        <script src="js/animate.js"></script>
-        <script src="js/menu.js"></script>
-        <script src="js/mask.js"></script>
+        <script src="<?php echo INCLUDE_PATH_PANEL; ?>js/animate.js"></script>
+        <script src="<?php echo INCLUDE_PATH_PANEL; ?>js/menu.js"></script>
+        <script src="<?php echo INCLUDE_PATH_PANEL; ?>js/mask.js"></script>
+        <script src="<?php echo INCLUDE_PATH_PANEL; ?>js/jquery.js"></script>
+
+        <script src="<?php echo INCLUDE_PATH_PANEL; ?>js/userAjax.js"></script>
+
+
+
 
 
 </body>

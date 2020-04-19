@@ -171,7 +171,6 @@ function animeScroll() {
     - [x] Asside - Header - Content.
     - [x] Menu and pages.
     - [ ] Page Error.
-    - [ ] Animate login page.
     
 #### Back-End 
 - [ ] Website.
@@ -197,16 +196,14 @@ function animeScroll() {
     - [x] + `loadPage()`.
     - [ ] + `permission()`.
     - [x] + `getGroup()`.
-    - [ ] + `warning()`.
     - [ ] + `logFile()`.
     - [x] + `listUserOnline()`.
     - [x] + `listGuestDay()`.
     - [x] + `listGeustMonth()`.
 
 - [ ] User class.
-    - [ ] + `addUser()`.
-    - [ ] + `updateUser()`.
-    - [ ] + `deleteUser()`.
+    - [X] + `addUser()`.
+    - [X] + `updateUser()`.
 
 - [ ] Company class.
 
@@ -216,6 +213,9 @@ function animeScroll() {
 Basta clonar ou fazer o *download* do repositório e mexer à vontade.
 
 ## Histórico de lançamentos
+* 0.1.0
+    * ADIÇÃO: Adicionado os metodos `addUser()` e `updateUser()` na classe *class/User.php*.
+    * ADIÇÃO: Adicionado upload de imagens.
 * 0.0.9
     * ADIÇÃO: Adicionado o arquivo `painel/loginAjax.js` e `ajax/loginSend.php` controle de login via ajax.
     * ADIÇÃO: Adicionado contador de visitas, e usuários online.

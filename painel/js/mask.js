@@ -8,6 +8,9 @@
 
 //Objeto mask para adicionar maskara aos campos do formulário
 const mask = {
+    basic(value) {
+        return value
+    },
     cpf(value) {
         return value
             .replace(/\D/g, '')
