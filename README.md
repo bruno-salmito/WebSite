@@ -1,10 +1,9 @@
-# Website - Projeto Pessoal
-> Website desenvolvido para estudo
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
->Website pessoal, single page que foi desenvolvido para fins de estudo das linguagens `[JavaScript]`,`[PHP]`,`[HTML]` e `[CSS]`.
+# Website - Projeto Pessoal
+> Website desenvolvido  para fins de estudo das linguagens `[JavaScript]`,`[PHP]`,`[HTML]` e `[CSS]`.
 > Versão: 1.0
 
 <p align="center">
