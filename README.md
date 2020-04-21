@@ -204,14 +204,14 @@ function animeScroll() {
     - [X] + `addUser()`.
     - [X] + `updateUser()`.
 
-- [ ] Company class.
-
      
 ## Configuração para Desenvolvimento
 
 Basta clonar ou fazer o *download* do repositório e mexer à vontade.
 
 ## Histórico de lançamentos
+* 0.1.1
+    * ADIÇÃO: Adicionado sistema para permissão de acesso ao menu e páginas.
 * 0.1.0
     * ADIÇÃO: Adicionado os metodos `addUser()` e `updateUser()` na classe *class/User.php*.
     * ADIÇÃO: Adicionado upload de imagens.

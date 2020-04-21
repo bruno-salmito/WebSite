@@ -126,4 +126,40 @@ class Painel
         $sql->execute();
         return $sql->fetchAll();
     }
+
+    /**
+     * Adiciona um efeito ao menu selecionado
+     */
+    public static function selectMenu($par)
+    {
+        $url = explode('/', @$_GET['url'])[0];
+        if ($url == $par) {
+            //Adiciona a classe que contém a estilização do menu selecionado
+            echo 'class="menuSelect"';
+        }
+    }
+
+    /**
+     * Permissão de acesso ao menu
+     */
+    public static function permissionMenu($cargo)
+    {
+        if ($cargo == 0) {
+            return true;
+        } else {
+            echo 'style="display:none"';
+        }
+    }
+    /**
+     * Permissão de acesso a página
+     */
+    public static function permissionPage($cargo)
+    {
+        if ($cargo == 0) {
+            return true;
+        } else {
+            include('pages/not.php');
+            die();
+        }
+    }
 }// fim class Painel

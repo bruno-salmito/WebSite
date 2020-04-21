@@ -89,20 +89,20 @@ if (isset($_GET['logout'])) {
                 <h2>Cadastros</h2>
                 <i class="fa fa-plus"></i>
                 <ul data-asside="top">
-                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>cadUser">Usuário</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>cadSlider">Slider</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>cadDep">Depoimento</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>cadServ">Serviços</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>cadTeam">Equipe</a></li>
+                    <li><a <?php Painel::selectMenu('cadUser'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>cadUser">Usuário</a></li>
+                    <li><a <?php Painel::selectMenu('cadSlider'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>cadSlider">Slider</a></li>
+                    <li><a <?php Painel::selectMenu('cadDep'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>cadDep">Depoimento</a></li>
+                    <li><a <?php Painel::selectMenu('cadServ'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>cadServ">Serviços</a></li>
+                    <li><a <?php Painel::selectMenu('cadTeam'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>cadTeam">Equipe</a></li>
                 </ul>
             </div>
             <!--assideMenu-->
-            <div class="assideMenu">
+            <div class="assideMenu" <?php Painel::permissionMenu($_SESSION['grupo']); ?>>
                 <h2>Editar</h2>
                 <i class="fa fa-plus"></i>
                 <ul data-asside="top">
-                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>editUser">Usuário</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>editComp">Empresa</a></li>
+                    <li><a <?php Painel::selectMenu('editUser'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>editUser">Usuário</a></li>
+                    <li><a <?php Painel::selectMenu('editComp'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>editComp">Empresa</a></li>
                 </ul>
             </div>
             <!--assideMenu-->

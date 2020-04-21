@@ -314,6 +314,10 @@ header .logout a:hover {
     transform: rotate(0);
 }
 
+.menuSelect {
+    color: red !important;
+}
+
 /*------------------------------------------------
 * Content 
 */

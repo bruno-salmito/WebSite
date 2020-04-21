@@ -1,4 +1,5 @@
 <?php
+Painel::permissionPage($_SESSION['grupo']);
 /*
 if (isset($_POST['acao'])) {
     if ($_FILES['imagem']['name'] != '') {
