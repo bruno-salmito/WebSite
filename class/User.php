@@ -52,7 +52,6 @@ class User
         }
     } //fim addUser
 
-
     /**
      * Verifica se o arquivo enviado é uma imagem
      * @param $imagem = 

@@ -16,11 +16,11 @@
         <form method="POST" enctype="multipart/form-data" id="form">
             <div class="inputBox w50 left">
                 <label>Nome:</label>
-                <input type="text" name="name" required>
+                <input type="text" name="name">
             </div>
             <div class="inputBox w50 right">
                 <label>Foto:</label>
-                <input type="file" name="imagem" id="imagem" accept="image/*" required>
+                <input type="file" name="imagem" id="imagem" accept="image/*">
             </div>
             <div class="clear"></div>
 

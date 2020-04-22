@@ -162,4 +162,19 @@ class Painel
             die();
         }
     }
+    /**
+     * Cadastra um depoimento no banco de dados
+     * @param $info = Array com as informações preenchidas
+     * @param $img = foto do depoimento
+     */
+    public static function addDepoimento($info, $img)
+    {
+        $sql = Mysql::connect()->prepare("INSERT INTO `tb_site.depoimentos` VALUES (null,?,?,?)");
+        $sql->execute(array($info['name'], $img, $info['depoimento']));
+        if ($sql->rowCount() >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }// fim class Painel
