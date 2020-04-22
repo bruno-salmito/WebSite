@@ -193,7 +193,7 @@ function animeScroll() {
 - [ ] Painel class.
     - [x] + `login()`.
     - [x] + `loadPage()`.
-    - [ ] + `permission()`.
+    - [x] + `permission()`.
     - [x] + `getGroup()`.
     - [ ] + `logFile()`.
     - [x] + `listUserOnline()`.

@@ -11,8 +11,8 @@ $('#imagem').change(function () {
         return false;
     }
 });
-$('#cpf').change(function () {
-    var teste = $('#cpf').val();
+$('#email').change(function () {
+    var teste = $('#email').val();
     document.getElementById('login').value = teste;
 })
 

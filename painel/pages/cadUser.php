@@ -44,7 +44,7 @@
 
             <div class="inputBox w50 left">
                 <label>E-mail:</label>
-                <input type="email" name="email" required>
+                <input type="email" name="email" id="email" required>
             </div>
             <div class="inputBox w50 left">
                 <label>Telefone:</label>
