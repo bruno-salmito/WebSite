@@ -185,16 +185,40 @@ Guest::guestOnline();
     </section>
 
     <section class="testimony" data-anime="top">
+        <?php
+        $data = date('Y-m-d');
+        $sql = Mysql::connect()->prepare("SELECT * FROM `tb_site.depoimentos` WHERE data <= ?  ORDER BY data DESC limit 1");
+        $sql->execute(array($data));
+        $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+        ?>
         <div class="center">
             <div class="wrapTestimony">
                 <h2>O que nossos clientes dizem.</h2>
+                <?php foreach ($info as $key => $value) {
+                    if ($value['depoimento']) {
+                        echo '<blockquote>' . $value['depoimento'] . '<blockquote>';
+                    }
+                    if ($value['nome']) {
+                        echo '<p>' . $value['nome'] . '</p>';
+                    }
+                    if ($value['img']) {
+                        echo '<img src="painel/uploads/users/' . $value['img'] . '"></img>';
+                    }
+                }; ?>
+
+                <!--
+
                 <blockquote>
+
+                    
+                   
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic libero id ipsum optio expedita maiores,
                     temporibus consequuntur atque autem reiciendis unde adipisci vitae? Nihil consequuntur voluptatum
                     voluptatem! Enim, cupiditate assumenda.
                 </blockquote>
                 <p>Nome do cliente</p>
                 <img src="img/avatar1.png" alt="Nome do Cliente">
+                -->
             </div>
         </div>
         <!--center-->

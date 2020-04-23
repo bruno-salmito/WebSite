@@ -468,6 +468,7 @@ section.testimony .wrapTestimony p {
 
 section.testimony .wrapTestimony img {
     max-width: 64px;
+    border-radius: 50%;
 }
 
 /*----------------------------------------------------

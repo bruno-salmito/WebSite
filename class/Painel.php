@@ -169,8 +169,9 @@ class Painel
      */
     public static function addDepoimento($info, $img)
     {
-        $sql = Mysql::connect()->prepare("INSERT INTO `tb_site.depoimentos` VALUES (null,?,?,?)");
-        $sql->execute(array($info['name'], $img, $info['depoimento']));
+        $data = date("Y-m-d");
+        $sql = Mysql::connect()->prepare("INSERT INTO `tb_site.depoimentos` VALUES (null,?,?,?,?)");
+        $sql->execute(array($info['name'], $img, $info['depoimento'], $data));
         if ($sql->rowCount() >= 1) {
             return true;
         } else {
