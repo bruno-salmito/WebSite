@@ -41,7 +41,7 @@ $(document).ready(function () {
                         $('.msgSuccess').fadeOut();
                         $('.msgSuccess span').remove();
                     }, 5000);
-                    console.log(response);
+                    //console.log(response);
                 } else {
                     $('.loader').fadeOut();
                     $('.msgError').append(response.message);
@@ -50,7 +50,7 @@ $(document).ready(function () {
                         $('.msgError').fadeOut();
                         $('.msgError span').remove();
                     }, 5000);
-                    console.log(response);
+                    //console.log(response);
                 }
 
             }

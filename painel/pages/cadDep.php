@@ -16,7 +16,7 @@
         <form method="POST" enctype="multipart/form-data" id="form">
             <div class="inputBox w50 left">
                 <label>Nome:</label>
-                <input type="text" name="name">
+                <input type="text" name="name" id="name">
             </div>
             <div class="inputBox w50 right">
                 <label>Foto:</label>

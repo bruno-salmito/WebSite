@@ -111,9 +111,10 @@ if (isset($_GET['logout'])) {
                 <h2>Relatórios</h2>
                 <i class="fa fa-plus"></i>
                 <ul data-asside="top">
-                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>visitas">Visitas</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>email">E-Mail</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH_PANEL; ?>contatos">Leads</a></li>
+                    <li><a <?php Painel::selectMenu('listdep'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>listdep">depoimentos</a></li>
+                    <li><a <?php Painel::selectMenu('visitas'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>visitas">Visitas</a></li>
+                    <li><a <?php Painel::selectMenu('email'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>email">E-Mail</a></li>
+                    <li><a <?php Painel::selectMenu('contatos'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>contatos">Leads</a></li>
                 </ul>
             </div>
             <!--assideMenu-->
