@@ -178,4 +178,15 @@ class Painel
             return false;
         }
     }
+
+    /**
+     * Selectiona todos os dados de uma
+     * @param table de referência
+     */
+    public static function selectTall($table)
+    {
+        $sql = Mysql::connect()->prepare("SELECT * FROM `$table`");
+        $sql->execute();
+        return $sql->fetchAll();
+    }
 }// fim class Painel
