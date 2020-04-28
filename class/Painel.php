@@ -183,10 +183,60 @@ class Painel
      * Selectiona todos os dados de uma
      * @param table de referência
      */
-    public static function selectTall($table)
+    public static function selectTall($table, $start = null, $end = null)
     {
-        $sql = Mysql::connect()->prepare("SELECT * FROM `$table`");
+        if ($start == null && $end == null) {
+            $sql = Mysql::connect()->prepare("SELECT * FROM `$table` ORDER BY id DESC");
+        } else {
+            //Usuário não passou páginação
+            $sql = Mysql::connect()->prepare("SELECT * FROM `$table` ORDER BY id DESC LIMIT $start,$end");
+        }
         $sql->execute();
+
         return $sql->fetchAll();
+    }
+
+    /**
+     * Deleta os dados de uma tabela
+     */
+    public static function deleteReg($table, $id = false)
+    {
+        if ($id == false) {
+            //Apaga todos os dados da tabela
+            $sql = Mysql::connect()->prepare("DELETE FROM `$table`");
+        } else {
+            //Apaga os dados pelo id
+            $sql = Mysql::connect()->prepare("DELETE FROM `$table` WHERE $id");
+        }
+    }
+
+    /**
+     * Redireciona a página
+     */
+    public static function redireciona($pagina)
+    {
+        echo '<script>window.location.href="' . $pagina . '";</script>';
+    }
+    /**
+     * Seleciona os dados do depoimento para editar
+     */
+    public static function selectDep($id)
+    {
+        $sql = Mysql::connect()->prepare("SELECT * FROM `tb_site.depoimentos` WHERE id = $id");
+        $sql->execute();
+        return $sql->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    /**
+     * Atualiza o depoimento
+     */
+    public static function updateDepoimento($info)
+    {
+        $sql = Mysql::connect()->prepare("UPDATE `tb_site.depoimentos` SET nome = ?, depoimento = ? WHERE id = ?");
+        if ($sql->execute(array($info['nome'], $info['depoimento'], $info['id']))) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }// fim class Painel

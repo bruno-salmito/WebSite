@@ -210,6 +210,8 @@ function animeScroll() {
 Basta clonar ou fazer o *download* do repositório e mexer à vontade.
 
 ## Histórico de lançamentos
+* 0.1.2
+    * ADIÇÃO: Adicionado edição e exclusão dos depoimentos.
 * 0.1.1
     * ADIÇÃO: Adicionado sistema para permissão de acesso ao menu e páginas.
 * 0.1.0

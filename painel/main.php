@@ -103,6 +103,8 @@ if (isset($_GET['logout'])) {
                 <ul data-asside="top">
                     <li><a <?php Painel::selectMenu('editUser'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>editUser">Usuário</a></li>
                     <li><a <?php Painel::selectMenu('editComp'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>editComp">Empresa</a></li>
+                    <!--<li><a <?php Painel::selectMenu('editDep'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>editDep">Depoimento</a></li>
+-->
                 </ul>
             </div>
             <!--assideMenu-->
@@ -158,7 +160,7 @@ if (isset($_GET['logout'])) {
         <script src="<?php echo INCLUDE_PATH_PANEL; ?>js/menu.js"></script>
         <script src="<?php echo INCLUDE_PATH_PANEL; ?>js/mask.js"></script>
         <script src="<?php echo INCLUDE_PATH_PANEL; ?>js/jquery.js"></script>
-
+        <script src="<?php echo INCLUDE_PATH_PANEL; ?>js/script.js"></script>
         <script src="<?php echo INCLUDE_PATH_PANEL; ?>js/userAjax.js"></script>
 
 

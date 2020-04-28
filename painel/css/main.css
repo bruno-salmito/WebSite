@@ -589,6 +589,56 @@ header .logout a:hover {
     left: 0;
 }
 
+.btn {
+    width: 15.0rem;
+    height: 4.0rem;
+    background-color: #343A40;
+    color: rgb(201, 205, 209);
+    font-size: 1.8rem;
+    transition: .8s ease;
+    text-align: center;
+    margin-top: 3.0rem;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+    line-height: 4.0rem;
+    display: block;
+    width: 100%;
+}
+
+
+#btn:hover a {
+
+    background-color: rgb(156, 159, 161);
+    color: #343A40;
+}
+
+.paginacao {
+    width: 100%;
+    text-align: right;
+    margin-top: 3.0rem;
+}
+
+.paginacao a {
+    color: #343A40;
+    font-size: 1.4rem;
+    margin-right: .5rem;
+    text-decoration: none;
+    border: .1rem solid #343A40;
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    text-align: center;
+
+}
+
+.paginacao a.paginaSelect {
+    background-color: #ccc;
+    color: #DC3D46;
+}
+
 
 [data-anime] {
     opacity: 0;
