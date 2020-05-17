@@ -170,8 +170,8 @@ class Painel
     public static function addDepoimento($info, $img)
     {
         $data = date("Y-m-d");
-        $sql = Mysql::connect()->prepare("INSERT INTO `tb_site.depoimentos` VALUES (null,?,?,?,?)");
-        $sql->execute(array($info['name'], $img, $info['depoimento'], $data));
+        $sql = Mysql::connect()->prepare("INSERT INTO `tb_site.depoimentos` VALUES (null,?,?,?,?,?)");
+        $sql->execute(array($info['name'], $img, $info['depoimento'], $data, 0));
         if ($sql->rowCount() >= 1) {
             return true;
         } else {
@@ -180,7 +180,20 @@ class Painel
     }
 
     /**
-     * Selectiona todos os dados de uma
+     * Adiciona um novo serviço
+     */
+    public static function addServico($info)
+    {
+        $sql = Mysql::connect()->prepare("INSERT INTO `tb_site.servicos` VALUES (null,?,?,?)");
+        $sql->execute(array($info['icone'], $info['titulo'], $info['descricao']));
+        if ($sql->rowCount() >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    /**
+     * Selectiona todos os dados de uma tabela
      * @param table de referência
      */
     public static function selectTall($table, $start = null, $end = null)

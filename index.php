@@ -124,14 +124,45 @@ Guest::guestOnline();
             <h2 data-anime="left">Assuma o controle de sua empresa. Veja alguns de nossos recursos.</h2>
 
             <div class="boxWraper">
-                <div class="boxSingle" data-anime="left">
-                    <i class="far fa-copy"></i>
-                    <h4>Controle Financeiro</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum eveniet at animi expedita? Fugit
-                        reprehenderit rem quod minus quia autem ab? Impedit eius earum qui quos nesciunt unde maiores
-                        repellendus.</p>
-                </div>
-                <!--boxSingle-->
+                <?php
+                $sql = Mysql::connect()->prepare("SELECT * FROM `tb_site.servicos` LIMIT 3");
+                $sql->execute();
+                $servico = $sql->fetchAll(PDO::FETCH_ASSOC);
+                $contador = 1;
+                foreach ($servico as $key => $value) {
+                    switch ($contador) {
+                        case 1:
+                            echo '<div class="boxSingle" data-anime="left">';
+                            $contador++;
+                            break;
+
+                        case 2:
+                            echo '<div class="boxSingle" data-anime="top">';
+                            $contador++;
+                            break;
+                        case 3:
+                            echo '<div class="boxSingle" data-anime="right">';
+                            $contador = 1;
+                            break;
+                    }
+                    echo '<i class="' . $value['icone'] . '"></i>';
+                    echo '<h4>' . $value['titulo'] . '</h4>';
+                    echo '<p>' . $value['descricao'] . '</p>';
+                    echo '</div>';
+                }
+                ?>
+
+                <?php /*
+                    <div class="boxSingle" data-anime="left">
+                        <i class="far fa-copy"></i>
+                        <h4>Controle Financeiro</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum eveniet at animi expedita? Fugit
+                            reprehenderit rem quod minus quia autem ab? Impedit eius earum qui quos nesciunt unde maiores
+                            repellendus.</p>
+                    </div>
+                    <!--boxSingle-->
+
+
                 <div class="boxSingle" data-anime="top">
                     <i class="far fa-paper-plane"></i>
                     <h4>Controle Financeiro</h4>
@@ -176,6 +207,8 @@ Guest::guestOnline();
                         repellendus.</p>
                 </div>
                 <!--boxSingle-->
+                */
+                ?>
             </div>
             <!--boxWraper-->
 
