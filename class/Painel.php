@@ -222,7 +222,6 @@ class Painel
             $sql = Mysql::connect()->prepare("DELETE FROM `$table` WHERE $id");
         }
     }
-
     /**
      * Redireciona a página
      */
