@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * TODO ADICIONAR ORDENAR 
+ * 
+ */
+
+/**
  * Classe do painel de controle que contém os principais metódos para 
  * uso no painel
  * Autor: Bruno Salmto
