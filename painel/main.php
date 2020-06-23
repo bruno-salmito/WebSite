@@ -94,6 +94,7 @@ if (isset($_GET['logout'])) {
                     <li><a <?php Painel::selectMenu('cadDep'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>cadDep">Depoimento</a></li>
                     <li><a <?php Painel::selectMenu('cadServ'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>cadServ">Serviços</a></li>
                     <li><a <?php Painel::selectMenu('cadTeam'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>cadTeam">Equipe</a></li>
+                    <li><a <?php Painel::selectMenu('cadTeam'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>cadTeam">Categoria</a></li>
                 </ul>
             </div>
             <!--assideMenu-->
@@ -108,6 +109,19 @@ if (isset($_GET['logout'])) {
                 </ul>
             </div>
             <!--assideMenu-->
+            <div class="assideMenu">
+                <h2>Gestão</h2>
+                <i class="fa fa-plus"></i>
+                <ul data-asside="top">
+                    <li><a <?php Painel::selectMenu('cadCategoria'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>cadCategoria">Cadastrar Categorias</a></li>
+                    <li><a <?php Painel::selectMenu('listCategoria'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>listCategoria">Listar Categorias</a></li>
+                    <li><a <?php Painel::selectMenu('cadNoticia'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>cadNoticia">Cadastrar Notícia</a></li>
+                    <li><a <?php Painel::selectMenu('listNoticia'); ?> href="<?php echo INCLUDE_PATH_PANEL; ?>listNoticia">Listar Notícia</a></li>
+                </ul>
+            </div>
+            <!--assideMenu-->
+
+
 
             <div class="assideMenu">
                 <h2>Relatórios</h2>

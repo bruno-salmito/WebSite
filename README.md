@@ -4,7 +4,7 @@
 
 # Website - Projeto Pessoal
 > Website desenvolvido  para fins de estudo das linguagens `[JavaScript]`,`[PHP]`,`[HTML]` e `[CSS]`.
-> Versão: 1.0
+> Versão: 1.1
 
 <p align="center">
 <img width="70%" src="img/website.gif" alt="Website"/>

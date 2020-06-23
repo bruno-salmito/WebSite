@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            text-align: center;
+        }
+
+        .bg {
+            width: 800px;
+            height: 400px;
+            display: block;
+            margin: 10px auto;
+            background-image: url('img/liveweb.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        h2 {
+            color: white;
+            font-size: 28px;
+            font-weight: normal;
+        }
+
+        p {
+            color: white;
+            font-size: 18px;
+            margin: 18px 0;
+        }
+
+        #demo {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="bg">
+
+    </div>
+
+    <div class="avisos">
+        <h2>Aguarde.....</h2>
+        <p>Esta chegando a maior plataforma de entreterimento da Serra da Ibiapaba</p>
+    </div>
+
+    <!-- Display the countdown timer in an element -->
+    <p id="demo"></p>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jul 2, 2020 18:30:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
